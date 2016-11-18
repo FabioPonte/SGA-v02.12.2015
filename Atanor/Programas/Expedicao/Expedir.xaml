@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="Atanor.Programas.Expedicao.Expedir"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="495" d:DesignWidth="1040" 
+             xmlns:my="clr-namespace:ThemaMeritor;assembly=ThemaMeritor" Loaded="UserControl_Loaded" 
+             xmlns:my1="clr-namespace:SGAPizza;assembly=SGAPizza">
+    <Grid Background="White" >
+        <Label Content="Expedição:" Height="41" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" FontSize="24" Foreground="Black" />
+        <Label Content="Data:" Height="28" HorizontalAlignment="Left" Margin="7,75,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="0" Height="47" HorizontalAlignment="Left" Margin="136,11,0,0" Name="lbl_romaneio" FontSize="28" Foreground="Black" VerticalAlignment="Top" />
+        <Label Content="Transportadora:" Height="28" HorizontalAlignment="Left" Margin="313,78,0,0" Name="label6" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="421,80,0,0" Name="cbo_transportadora" VerticalAlignment="Top" Width="215" />
+        <Label Content="Motorista:" Height="28" HorizontalAlignment="Left" Margin="7,114,0,0" Name="label8" VerticalAlignment="Top" />
+        <Label Content="Placa Caminhão:" Height="28" HorizontalAlignment="Left" Margin="313,114,0,0" Name="label9" VerticalAlignment="Top" />
+        <Label Content="Tipo Caminhão:" Height="28" HorizontalAlignment="Left" Margin="655,114,0,0" Name="label10" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="754,114,0,0" Name="cbo_tipo_caminhao" VerticalAlignment="Top" Width="145" SelectionChanged="cbo_tipo_caminhao_SelectionChanged" />
+        <DatePicker Height="30" HorizontalAlignment="Left" Margin="84,76,0,0" Name="dt_data" VerticalAlignment="Top" Width="215" />
+        <Label Content="Nota:" Height="28" HorizontalAlignment="Left" Margin="2,177,0,0" Name="label5" VerticalAlignment="Top" />
+        <Image Height="17" Margin="0,154,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Source="/Atanor;component/Images/linha1.png" />
+        <TextBox Height="31" HorizontalAlignment="Left" Margin="55,178,0,0" Name="txt_nota" VerticalAlignment="Top" Width="88" />
+        <Label Content="Emissão:" Height="28" HorizontalAlignment="Left" Margin="198,178,0,0" Name="label11" VerticalAlignment="Top" />
+        <DatePicker Height="30" HorizontalAlignment="Left" Margin="260,178,0,0" Name="data_emissao" VerticalAlignment="Top" Width="146" />
+        <Label Content="Cliente:" Height="28" HorizontalAlignment="Left" Margin="416,177,0,0" Name="label12" VerticalAlignment="Top" />
+        <Label Content="Estado:" Height="28" HorizontalAlignment="Right" Margin="0,177,271,0" Name="label13" VerticalAlignment="Top" />
+        <ComboBox Height="31" HorizontalAlignment="Right" Margin="0,178,174,0" Name="cbo_estado" VerticalAlignment="Top" Width="92" />
+        <Label Content="Cidade:" Height="28" HorizontalAlignment="Right" Margin="0,180,114,0" Name="label14" VerticalAlignment="Top" />
+        <TextBox Height="31" HorizontalAlignment="Right" Margin="0,178,12,0" Name="txt_cidade" VerticalAlignment="Top" Width="97" />
+        <Label Content="Produto:" Height="28" HorizontalAlignment="Left" Margin="1,220,0,0" Name="label15" VerticalAlignment="Top" />
+        <ComboBox Height="31" Margin="55,217,0,0" Name="cbo_produto" VerticalAlignment="Top" HorizontalAlignment="Left" Width="342" />
+        <Label Content="Lote:" Height="28" HorizontalAlignment="Right" Margin="0,220,581,0" Name="label16" VerticalAlignment="Top" />
+        <TextBox Height="31" HorizontalAlignment="Right" Margin="0,220,331,0" Name="txt_lote" VerticalAlignment="Top" Width="232" />
+        <Label Content="Liquido:" Height="28" HorizontalAlignment="Right" Margin="0,220,267,0" Name="label17" VerticalAlignment="Top" />
+        <TextBox Height="31" HorizontalAlignment="Right" Margin="0,217,174,0" Name="txt_liquido" VerticalAlignment="Top" Width="92" TextChanged="txt_liquido_TextChanged" />
+        <DataGrid AutoGenerateColumns="True" Margin="7,257,163,34" Name="ogrid" SelectionChanged="ogrid_SelectionChanged" />
+        <Label Width="383" Name="lbl_pesos" Height="30" Content="" Margin="0,0,163,2" VerticalAlignment="Bottom" HorizontalAlignment="Right" ></Label>
+        <Button Content="Adicionar" Height="32" HorizontalAlignment="Right" Margin="0,257,11,0" Name="btn_add" VerticalAlignment="Top" Width="145" Click="btn_add_Click" />
+        <Button Content="Editar" Height="32" HorizontalAlignment="Right" Margin="0,295,11,0" Name="btn_editar" VerticalAlignment="Top" Width="145" Click="btn_editar_Click" />
+        <Button Content="Excluir" Height="32" HorizontalAlignment="Right" Margin="0,333,11,0" Name="btn_excluir" VerticalAlignment="Top" Width="145" Click="btn_excluir_Click" />
+        <Button Height="66" HorizontalAlignment="Right" IsEnabled="True" Margin="0,4,10,0" Name="button5" VerticalAlignment="Top" Width="72" Click="button5_Click">
+            <StackPanel>
+                <Image Height="35" Source="/Atanor;component/Images/download168.png" Width="39" />
+                <Label Content="Baixa" />
+            </StackPanel>
+        </Button>
+        <Label Content="Bruto:" Height="28" HorizontalAlignment="Right" Margin="0,217,114,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="31" HorizontalAlignment="Right" Margin="0,217,12,0" Name="txt_bruto" VerticalAlignment="Top" Width="97" />
+        <Image Height="41" HorizontalAlignment="Left" Margin="904,90,0,0" Name="img_foto" Stretch="Fill" VerticalAlignment="Top" Width="126" />
+        <Label Content="CNH:" Height="28" HorizontalAlignment="Left" Margin="83,133,0,0" Name="label7" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="84,114,0,0" Name="cbo_motorista" VerticalAlignment="Top" Width="206" SelectionChanged="cbo_motorista_SelectionChanged" />
+        <Label Content="0016546516" Height="28" HorizontalAlignment="Left" Margin="115,133,0,0" Name="lbl_cnh" VerticalAlignment="Top" />
+        <Button Height="31" HorizontalAlignment="Left" Margin="358,217,0,0" Name="button1" VerticalAlignment="Top" Width="48" Click="button1_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <Button Height="23" HorizontalAlignment="Left" Margin="251,114,0,0" Name="button3" VerticalAlignment="Top" Width="48" Click="button3_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="421,114,0,0" Name="cbo_caminhao" VerticalAlignment="Top" Width="206" SelectionChanged="cbo_caminhao_SelectionChanged" />
+        <Button Content="Modo Cadastro" Height="32" HorizontalAlignment="Right" Margin="0,370,11,0" Name="btn_cadastro" VerticalAlignment="Top" Width="145" IsEnabled="False" Click="btn_cadastro_Click" />
+        <Label Content="CD:" Height="28" HorizontalAlignment="Left" Margin="655,80,0,0" Name="label18" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="754,80,0,0" Name="cbo_cd" VerticalAlignment="Top" Width="145" />
+        <ComboBox Height="30" HorizontalAlignment="Left" Margin="421,26,0,0" Name="cbo_idRomaneio" VerticalAlignment="Top" Width="215" FontSize="16" FontWeight="Bold" />
+        <Button Height="30" HorizontalAlignment="Left" Margin="641,25,0,0" Name="button4" VerticalAlignment="Top" Width="117" Click="button4_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+                <Label>Romaneio</Label>
+            </StackPanel>
+        </Button>
+        <Button Height="30" HorizontalAlignment="Left" Margin="763,26,0,0" Name="buttonq" VerticalAlignment="Top" Width="117" Click="buttonq_Click" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+                <Label>CheckList</Label>
+            </StackPanel>
+        </Button>
+        <ComboBox Height="31" Margin="477,178,331,0" Name="txt_cliente" VerticalAlignment="Top" IsEditable="True" />
+        <Label Content="Expedição:" Height="28" HorizontalAlignment="Left" Margin="313,25,0,0" Name="label2" VerticalAlignment="Top" />
+        <Image Height="17" Margin="1,59,-1,0" Name="image1" Source="/Atanor;component/Images/linha1.png" Stretch="Fill" VerticalAlignment="Top" />
+        <Button Height="31" HorizontalAlignment="Left" Margin="142,178,0,0" Name="button6" VerticalAlignment="Top" Width="48" Click="button6_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <Button Height="23" HorizontalAlignment="Left" Margin="588,114,0,0" Name="button2" VerticalAlignment="Top" Width="48" Click="button2_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="2,142,0,0" x:Name="txt_vendedor" VerticalAlignment="Top" Width="64" IsEnabled="False" Visibility="Collapsed" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="2,142,0,0" x:Name="txt_posicao" VerticalAlignment="Top" Width="64" IsEnabled="False" Visibility="Collapsed" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="2,142,0,0" x:Name="txt_utilizacao" VerticalAlignment="Top" Width="64" IsEnabled="False" Visibility="Collapsed" />
+    </Grid>
+</UserControl>

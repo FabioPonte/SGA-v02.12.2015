@@ -1,0 +1,1066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{954E1376-5776-4B7E-9A41-B4278F55E977}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Atanor</RootNamespace>
+    <AssemblyName>Atanor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>google_analytics.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Conector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Conector.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\..\..\Desktop\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\..\..\..\..\Desktop\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification">
+      <HintPath>..\..\..\..\Downloads\wpf-notifyicon\wpf-notifyicon\NotifyIconWpf\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer">
+      <HintPath>..\..\comopdf2\comopdf2\bin\Debug\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.PdfSharp">
+      <HintPath>..\..\comopdf2\comopdf2\bin\Debug\HtmlRenderer.PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LetsMove.Access2">
+      <HintPath>..\..\..\..\Documents\LetsMove.Access2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\Visual Studio 2010\Projects\SGAPizza\SGAPizza\bin\Debug\Microsoft.Expression.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\Visual Studio 2010\Projects\SGAPizza\SGAPizza\bin\Debug\Microsoft.Expression.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Effects, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\Visual Studio 2010\Projects\SGAPizza\SGAPizza\bin\Debug\Microsoft.Expression.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\Visual Studio 2010\Projects\SGAPizza\SGAPizza\bin\Debug\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\comopdf2\comopdf2\bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting">
+      <HintPath>..\..\comopdf2\comopdf2\bin\Debug\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="SGABarras">
+      <HintPath>..\..\..\Documents\Visual Studio 2012\Projects\SGABarras\SGABarras\bin\Debug\SGABarras.dll</HintPath>
+    </Reference>
+    <Reference Include="SGAPizza, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SGAPizza.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\Conector\Conector\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tema\Thema\Thema\bin\Debug\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tema\Thema\Thema\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\Visual Studio 2010\Projects\SGAPizza\SGAPizza\bin\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Thema">
+      <HintPath>..\..\Tema\Thema\Thema\bin\Debug\Thema.dll</HintPath>
+    </Reference>
+    <Reference Include="ThemaMeritor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThemaMeritor.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tema\Thema\Thema\bin\Debug\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\..\Tema\Thema\Thema\bin\Debug\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Arquivos\Abrir.cs" />
+    <Compile Include="Arquivos\Excel.cs" />
+    <Compile Include="Arquivos\Informacoes.cs" />
+    <Compile Include="Arquivos\Listador.cs" />
+    <Compile Include="Escondido.xaml.cs">
+      <DependentUpon>Escondido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Externamente.xaml.cs">
+      <DependentUpon>Externamente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Facilitadores\AbrirArquivo.cs" />
+    <Compile Include="Facilitadores\Bloqueador.cs" />
+    <Compile Include="Facilitadores\ConverteDataParaDataGrid.cs" />
+    <Compile Include="Facilitadores\ConverterBytsEmImagens.cs" />
+    <Compile Include="Facilitadores\ConverterDataParaDataDoMysql.cs" />
+    <Compile Include="Facilitadores\ConverterHexaEmBrushes.cs" />
+    <Compile Include="Facilitadores\ConverterImagemEmByte.cs" />
+    <Compile Include="Facilitadores\Data.cs" />
+    <Compile Include="Facilitadores\ErroLog.cs" />
+    <Compile Include="Facilitadores\ExportarParaExcel.cs" />
+    <Compile Include="Facilitadores\ExportarParaPDF.cs" />
+    <Compile Include="Facilitadores\Flash.cs" />
+    <Compile Include="Facilitadores\MandarEmail.cs" />
+    <Compile Include="Facilitadores\Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Facilitadores\ObterPermissao.cs" />
+    <Compile Include="Facilitadores\Transferidor.cs" />
+    <Compile Include="Facilitadores\TrocarFotodeUsuario.cs" />
+    <Compile Include="Menu\Almoxarifado.xaml.cs">
+      <DependentUpon>Almoxarifado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Correcao.xaml.cs">
+      <DependentUpon>Correcao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Expedicao.xaml.cs">
+      <DependentUpon>Expedicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Logistica.xaml.cs">
+      <DependentUpon>Logistica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Material.xaml.cs">
+      <DependentUpon>Material.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MenuCabecalho.xaml.cs">
+      <DependentUpon>MenuCabecalho.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MenuItemSGA.xaml.cs">
+      <DependentUpon>MenuItemSGA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Modulos.xaml.cs">
+      <DependentUpon>Modulos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Portaria.xaml.cs">
+      <DependentUpon>Portaria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Relatorios.xaml.cs">
+      <DependentUpon>Relatorios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Suplly.xaml.cs">
+      <DependentUpon>Suplly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Usuarios.xaml.cs">
+      <DependentUpon>Usuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Aguarde.xaml.cs">
+      <DependentUpon>Aguarde.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Alarme.xaml.cs">
+      <DependentUpon>Alarme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Alerta.xaml.cs">
+      <DependentUpon>Alerta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Erro.xaml.cs">
+      <DependentUpon>Erro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Info.xaml.cs">
+      <DependentUpon>Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Motivos.xaml.cs">
+      <DependentUpon>Motivos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Notificacao.xaml.cs">
+      <DependentUpon>Notificacao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Pergunta.xaml.cs">
+      <DependentUpon>Pergunta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox\Show.cs" />
+    <Compile Include="MySQL\AbrirArquivoConfig.cs" />
+    <Compile Include="MySQL\Crypto.cs" />
+    <Compile Include="Pastas.cs" />
+    <Compile Include="Programas\Alarme\Alarme.xaml.cs">
+      <DependentUpon>Alarme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Almoxarifado\Baixa.xaml.cs">
+      <DependentUpon>Baixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Almoxarifado\Cadastro.xaml.cs">
+      <DependentUpon>Cadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Almoxarifado\Fabricantes.xaml.cs">
+      <DependentUpon>Fabricantes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Almoxarifado\GrupoItens.xaml.cs">
+      <DependentUpon>GrupoItens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Almoxarifado\ListaItens.xaml.cs">
+      <DependentUpon>ListaItens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Almoxarifado\Manutencao.xaml.cs">
+      <DependentUpon>Manutencao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Almoxarifado\Requisitantes.xaml.cs">
+      <DependentUpon>Requisitantes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\ATAR\BarraLote.xaml.cs">
+      <DependentUpon>BarraLote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\ATAR\ControleAtar.xaml.cs">
+      <DependentUpon>ControleAtar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\ATAR\ControlePatoBranco.xaml.cs">
+      <DependentUpon>ControlePatoBranco.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\ATAR\ControleXanxere.xaml.cs">
+      <DependentUpon>ControleXanxere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\BaixaSap.xaml.cs">
+      <DependentUpon>BaixaSap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\ListaDeResumo.xaml.cs">
+      <DependentUpon>ListaDeResumo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\Relatorio.xaml.cs">
+      <DependentUpon>Relatorio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Correcao\Resumo.xaml.cs">
+      <DependentUpon>Resumo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\Cfops.xaml.cs">
+      <DependentUpon>Cfops.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\Controles\ListExpedicao.xaml.cs">
+      <DependentUpon>ListExpedicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\Controles\ListExpedicaoItem.xaml.cs">
+      <DependentUpon>ListExpedicaoItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\DivisaoFrete.xaml.cs">
+      <DependentUpon>DivisaoFrete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\Entrega.xaml.cs">
+      <DependentUpon>Entrega.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\Expedir.xaml.cs">
+      <DependentUpon>Expedir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\GerarChecklist.cs" />
+    <Compile Include="Programas\Expedicao\GerarHtmlRomaneio.cs" />
+    <Compile Include="Programas\Expedicao\GerarRelatoriodeDivisaodeFretes.cs" />
+    <Compile Include="Programas\Expedicao\informacao.xaml.cs">
+      <DependentUpon>informacao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\ListaAtar.xaml.cs">
+      <DependentUpon>ListaAtar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\NotasExpedidas.xaml.cs">
+      <DependentUpon>NotasExpedidas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Expedicao\NotasFiscais.cs" />
+    <Compile Include="Programas\Expedicao\ObterInformacaoDaNota.cs" />
+    <Compile Include="Programas\Expedicao\online.xaml.cs">
+      <DependentUpon>online.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Logistica\CentroDeDistribuicao.xaml.cs">
+      <DependentUpon>CentroDeDistribuicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Logistica\Produtos.xaml.cs">
+      <DependentUpon>Produtos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Logistica\TabelaFretePrincipal.xaml.cs">
+      <DependentUpon>TabelaFretePrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Logistica\TabelaFrete\Carreta.xaml.cs">
+      <DependentUpon>Carreta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Logistica\TabelaFrete\Fracao.xaml.cs">
+      <DependentUpon>Fracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Logistica\TabelaFrete\Truck.xaml.cs">
+      <DependentUpon>Truck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Logistica\Transportadora.xaml.cs">
+      <DependentUpon>Transportadora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Material\baixa.xaml.cs">
+      <DependentUpon>baixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Material\Cadastro.xaml.cs">
+      <DependentUpon>Cadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Material\configuracao.xaml.cs">
+      <DependentUpon>configuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Material\recebimento.xaml.cs">
+      <DependentUpon>recebimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Material\relatorio.xaml.cs">
+      <DependentUpon>relatorio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\MemoriaPrograma.cs" />
+    <Compile Include="Programas\Portaria\AvisoRecebimento.xaml.cs">
+      <DependentUpon>AvisoRecebimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Portaria\CadastroCaminhao.xaml.cs">
+      <DependentUpon>CadastroCaminhao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Portaria\CadastroEmpresa.xaml.cs">
+      <DependentUpon>CadastroEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Portaria\CadastroMotorista.xaml.cs">
+      <DependentUpon>CadastroMotorista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\RelatorioHTML.xaml.cs">
+      <DependentUpon>RelatorioHTML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Relatorio\Criador.xaml.cs">
+      <DependentUpon>Criador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Relatorio\Gerador.xaml.cs">
+      <DependentUpon>Gerador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Relatorio\Salvar.xaml.cs">
+      <DependentUpon>Salvar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Suplly\Clipboardrelatorio.cs" />
+    <Compile Include="Programas\Suplly\CondicaoEstoque.xaml.cs">
+      <DependentUpon>CondicaoEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Suplly\DetalhesDaCondicaoDosEstoques.xaml.cs">
+      <DependentUpon>DetalhesDaCondicaoDosEstoques.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Suplly\Inventario.xaml.cs">
+      <DependentUpon>Inventario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Suplly\RelatorioDeEstadoDeEstoque.cs" />
+    <Compile Include="Facilitadores\Verificador.cs" />
+    <Compile Include="Programas\Usuarios\Cadastro.xaml.cs">
+      <DependentUpon>Cadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Usuarios\Controles\Lista.xaml.cs">
+      <DependentUpon>Lista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Usuarios\Controles\PacotePermissao.cs" />
+    <Compile Include="Programas\Usuarios\Permissao.xaml.cs">
+      <DependentUpon>Permissao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programas\Usuarios\TipoUsuario.xaml.cs">
+      <DependentUpon>TipoUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Redefinir.xaml.cs">
+      <DependentUpon>Redefinir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sessao.cs" />
+    <Compile Include="TaskMenu\ButtonTask.xaml.cs">
+      <DependentUpon>ButtonTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaskMenu\NotificacaoAlerta.xaml.cs">
+      <DependentUpon>NotificacaoAlerta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaskMenu\NotificationTab.xaml.cs">
+      <DependentUpon>NotificationTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaskMenu\Pacote.cs" />
+    <Compile Include="TaskMenu\PacoteManutencao.xaml.cs">
+      <DependentUpon>PacoteManutencao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TranslateTransformToRectViewboxVisualBrushConverter.cs" />
+    <Page Include="Escondido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Externamente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Facilitadores\Mapa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Menu\Almoxarifado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Correcao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Expedicao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Logistica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Material.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MenuCabecalho.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MenuItemSGA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Modulos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Portaria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Relatorios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Suplly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Usuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Aguarde.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Alarme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Alerta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Erro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Motivos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Notificacao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBox\Pergunta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Alarme\Alarme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Almoxarifado\Baixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Almoxarifado\Cadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Almoxarifado\Fabricantes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Almoxarifado\GrupoItens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Almoxarifado\ListaItens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Almoxarifado\Manutencao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Almoxarifado\Requisitantes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\ATAR\BarraLote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\ATAR\ControleAtar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\ATAR\ControlePatoBranco.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\ATAR\ControleXanxere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\BaixaSap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\ListaDeResumo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\Relatorio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Correcao\Resumo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\Cfops.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\Controles\ListExpedicao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\Controles\ListExpedicaoItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\DivisaoFrete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\Entrega.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\Expedir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\informacao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\ListaAtar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\NotasExpedidas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Expedicao\online.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Logistica\CentroDeDistribuicao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Logistica\Produtos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Logistica\TabelaFretePrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Logistica\TabelaFrete\Carreta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Logistica\TabelaFrete\Fracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Logistica\TabelaFrete\Truck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Logistica\Transportadora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Material\baixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Material\Cadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Material\configuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Material\recebimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Material\relatorio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Portaria\AvisoRecebimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Portaria\CadastroCaminhao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Portaria\CadastroEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Portaria\CadastroMotorista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\RelatorioHTML.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Relatorio\Criador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Relatorio\Gerador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Relatorio\Salvar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Suplly\CondicaoEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Suplly\DetalhesDaCondicaoDosEstoques.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Suplly\Inventario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Usuarios\Cadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Usuarios\Controles\Lista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Usuarios\Permissao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas\Usuarios\TipoUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Redefinir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskMenu\ButtonTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskMenu\NotificacaoAlerta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskMenu\NotificationTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskMenu\PacoteManutencao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\key60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logistics3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\seo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\linha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\linha2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\linha3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\browser68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Untitled-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\factory2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\factory2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logistics3 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logistics3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dollars44 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dollars44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mascara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user-anonymous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mascara2.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\setting4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\microsoftexcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pdf17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\printer70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\barra2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clock4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\alert5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\email20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\metal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\files4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chemistry2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\magnifyingglass6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\refresh27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\search102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\seo2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\barra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\upde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\factory3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\medical50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\industries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\living1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\history6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download168.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add199.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="google_analytics.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\check4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loop10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\man343.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lock7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Alarm-Tick-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Alarm-Warning-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Alarm-Help-and-Support-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Alarm-Error-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Other-Pin-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pin28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\packages2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Carga Seca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\car186.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delivery18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\20150301010617696_easyicon_net_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mapa-brasil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icontexto-message-types-wait-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\excel-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pdf-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\outlook-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\printer-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\google_alerts-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\google_alerts-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\star-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\appointment_reminders-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\notif.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Big-Flame-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo2.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\20150301010617696_easyicon_net_preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\b_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\b_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\b_del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\b_voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\flame.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\nots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\00notifi.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

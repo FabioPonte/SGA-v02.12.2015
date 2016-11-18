@@ -1,0 +1,51 @@
+-- -----------------------------------------------------
+-- Table `logistica`.`acerto_lote`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `logistica`.`acerto_lote` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `cd` VARCHAR(45) NOT NULL ,
+  `item` VARCHAR(45) NOT NULL ,
+  `descricao` VARCHAR(45) NOT NULL ,
+  `lote` VARCHAR(45) NOT NULL ,
+  `quantidade` DOUBLE NOT NULL ,
+  PRIMARY KEY (`id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `logistica`.`retorno_lote`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `logistica`.`retorno_lote` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `idacerto_lote` INT NOT NULL ,
+  `data_baixa` DATETIME NOT NULL ,
+  `docsap` VARCHAR(45) NULL ,
+  `quantidade` DOUBLE NOT NULL ,
+  `obs` VARCHAR(1024) NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_retorno_lote_acerto_lote1_idx` (`idacerto_lote` ASC) ,
+  CONSTRAINT `fk_retorno_lote_acerto_lote1`
+    FOREIGN KEY (`idacerto_lote` )
+    REFERENCES `logistica`.`acerto_lote` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `logistica`.`saida_lote`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `logistica`.`saida_lote` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `idretorno` INT NOT NULL ,
+  `nota` VARCHAR(45) NOT NULL ,
+  `quantidade` DOUBLE NOT NULL ,
+  `obs` VARCHAR(1024) NULL ,
+  PRIMARY KEY (`id`) ,
+  INDEX `fk_saida_lote_retorno_lote_idx` (`idretorno` ASC) ,
+  CONSTRAINT `fk_saida_lote_retorno_lote`
+    FOREIGN KEY (`idretorno` )
+    REFERENCES `logistica`.`retorno_lote` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;

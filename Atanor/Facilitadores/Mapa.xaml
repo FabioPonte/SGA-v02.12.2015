@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Atanor.Facilitadores.Mapa"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="449" d:DesignWidth="486" Loaded="UserControl_Loaded" Opacity="1">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/Atanor;component/Images/barra2.png" />
+    </UserControl.Background>
+    <Grid Opacity="1">
+
+        <Line X1="1" X2="1" Y1="1" Y2="1" Fill="Red" Stroke="Red" Height="449" StrokeThickness="2" Name="linha" HorizontalAlignment="Left" Width="486" VerticalAlignment="Top"></Line>
+
+        <Image Source="/Atanor;component/Images/mapa-brasil.png" HorizontalAlignment="Left" Width="480" Height="449" VerticalAlignment="Top"></Image>
+
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="AM" Width="23" Opacity="0.3" Margin="99,101,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="RR"  Width="23" Opacity="0.3" Margin="133,31,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="AC"  Width="23" Opacity="0.3" Margin="17,157,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="RO"  Width="23" Opacity="0.3" Margin="119,180,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="AP"  Width="23" Opacity="0.3" Margin="243,39,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="PA"  Width="23" Opacity="0.3" Margin="230,108,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="MT"  Width="23" Opacity="0.3" Margin="198,201,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="MA"  Width="23" Opacity="0.3" Margin="322,112,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="TO"  Width="23" Opacity="0.3" Margin="281,176,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="PI"  Width="23" Opacity="0.3" Margin="348,143,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="CE"  Width="23" Opacity="0.3" Margin="388,117,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="RN"  Width="23" Opacity="0.3" Margin="426,119,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="PB"  Width="23" Opacity="0.3" Margin="432,138,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="PE"  Width="23" Opacity="0.3" Margin="412,154,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="AL"  Width="23" Opacity="0.3" Margin="427,167,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="SE"  Width="23" Opacity="0.3" Margin="413,182,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="BA"  Width="23" Opacity="0.3" Margin="358,198,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="GO"  Width="23" Opacity="0.3" Margin="260,249,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="MS"  Width="23" Opacity="0.3" Margin="214,283,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="MG"  Width="23" Opacity="0.3" Margin="321,268,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="ES"  Width="23" Opacity="0.3" Margin="369,281,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="SP"  Width="23" Opacity="0.3" Margin="278,311,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="RJ"  Width="23" Opacity="0.3" Margin="344,311,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="PR"  Width="23" Opacity="0.3" Margin="245,334,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="SC"  Width="23" Opacity="0.3" Margin="262,365,0,0" />
+        <Label  Height="18" HorizontalAlignment="Left"  VerticalAlignment="Top" Name="RS"  Width="23" Opacity="0.3" Margin="225,395,0,0" />
+          
+            
+        
+
+        
+        <Rectangle Canvas.Left="466" Canvas.Top="48" Name="rectangle1" Stroke="Black" Margin="0,12,158,0" HorizontalAlignment="Right" Width="21" Height="20" VerticalAlignment="Top" Fill="Lime" />
+        <Image Canvas.Left="481" Canvas.Top="103" Height="20" Name="image1" Stretch="Fill" Width="21" Source="/Atanor;component/Images/barra2.png" Opacity="0.8" Margin="0,12,158,0" HorizontalAlignment="Right" VerticalAlignment="Top" />
+        <Rectangle Canvas.Left="466" Canvas.Top="48" Fill="#FFECFF00" Height="20" HorizontalAlignment="Right" Margin="0,39,158,0" Name="rectangle2" Stroke="Black" VerticalAlignment="Top" Width="21" />
+        <Image Canvas.Left="481" Canvas.Top="103" Height="20" HorizontalAlignment="Right" Margin="0,39,158,0" Name="image2" Opacity="0.8" Source="/Atanor;component/Images/barra2.png" Stretch="Fill" VerticalAlignment="Top" Width="21" />
+        <Label Content="Destino" Height="28" HorizontalAlignment="Right" Margin="0,34,97,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Origem" Height="28" HorizontalAlignment="Right" Margin="0,9,65,0" Name="label2" VerticalAlignment="Top" Width="87" />
+        <Label Height="18" HorizontalAlignment="Left" Margin="287,232,0,0" Name="DF" Opacity="0.3" VerticalAlignment="Top" Width="23" />
+    </Grid>
+</UserControl>

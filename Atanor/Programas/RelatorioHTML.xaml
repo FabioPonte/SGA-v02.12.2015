@@ -1,0 +1,15 @@
+﻿<Window x:Class="Atanor.Programas.RelatorioHTML"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Relatório" Height="581" Width="1074" Loaded="Window_Loaded" Icon="/Atanor;component/Images/LOGO.png" Closed="Window_Closed" WindowState="Maximized" BorderThickness="0">
+    <Grid>
+        <Menu Height="30" VerticalAlignment="Top">
+            <MenuItem Header="Salvar">
+                <MenuItem Header="Pdf" Click="MenuItem_Click" />
+                <MenuItem Header="Imprimir" Click="MenuItem_Click_1" />
+                <MenuItem Header="HTML" Click="MenuItem_Click_2" Name="html" IsEnabled="False" />
+            </MenuItem>
+        </Menu>
+        <WebBrowser Name="webBrowser1" Margin="-11,36,0,0" Opacity="0"/>
+    </Grid>
+</Window>

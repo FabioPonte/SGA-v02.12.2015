@@ -1,0 +1,32 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Atanor.Programas.Suplly"
+             xmlns:TaskMenu="clr-namespace:Atanor.TaskMenu" xmlns:Controles="clr-namespace:Atanor.Programas.Suplly.Controles" x:Class="Atanor.Programas.Suplly.CadastroPosicoes"
+             mc:Ignorable="d" 
+            d:DesignHeight="504" >
+    <Grid Background="White">
+        <TaskMenu:PacoteManutencao x:Name="pacote1" />
+        <ScrollViewer x:Name="pain" Margin="10,62,10,10" >
+            <Grid Height="929">
+                <TextBox x:Name="txt_p1" Height="23" TextWrapping="Wrap" Text="" Margin="84,16,0,0" HorizontalAlignment="Left" Width="253" Tag="nome1" VerticalAlignment="Top"/>
+                <Controles:MapaAtar x:Name="mapa" Margin="10,286,0,0" VerticalAlignment="Top" Width="Auto"/>
+                <Label x:Name="label" Content="Depósito:" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy" Content="Lado:" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy1" Content="Lado" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_p2" Height="23" TextWrapping="Wrap" Text="" Margin="84,47,0,0" HorizontalAlignment="Left" Width="253" Tag="nome2" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_p3" Height="23" TextWrapping="Wrap" Text="" Margin="84,78,0,0" HorizontalAlignment="Left" Width="253" Tag="nome3" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy2" Content="Observação:" HorizontalAlignment="Left" Margin="356,13,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_obs" TextWrapping="Wrap" Text="" Margin="436,16,19,0" AcceptsReturn="True" Tag="obs" Height="129" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy3" Content="Posição X:" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top"/>
+                <TextBox IsReadOnly="True" x:Name="txt_x" Height="23" TextWrapping="Wrap" Text="" Margin="84,122,0,0" HorizontalAlignment="Left" Width="73" Tag="x" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy4" Content="Posição Y:" HorizontalAlignment="Left" Margin="190,119,0,0" VerticalAlignment="Top"/>
+                <TextBox IsReadOnly="True" x:Name="txt_y" Height="23" TextWrapping="Wrap" Text="" Margin="264,122,0,0" HorizontalAlignment="Left" Width="73" Tag="y" VerticalAlignment="Top"/>
+                <DataGrid x:Name="ogrid" Margin="10,160,23,0" VerticalAlignment="Top" Height="109" SelectionChanged="ogrid_SelectionChanged"/>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

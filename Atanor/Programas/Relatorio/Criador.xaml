@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Atanor.Programas.Relatorio.Criador"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="495" d:DesignWidth="1040" xmlns:my="clr-namespace:ThemaMeritor;assembly=ThemaMeritor" Loaded="UserControl_Loaded_2" >
+    <Grid Name="Transportadoras">
+        <Rectangle Height="117" VerticalAlignment="Top" Margin="0,-3,0,0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Atanor;component/Images/barra.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Height="96" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" SnapsToDevicePixels="True" Source="/Atanor;component/Images/seo2 (1).png" Stretch="Uniform" VerticalAlignment="Top" Width="96" />
+        <Label Content="Cadastro de Relatórios" FontSize="24" Height="41" HorizontalAlignment="Left" Margin="114,12,0,0" Name="label1" VerticalAlignment="Top" Foreground="White" />
+        <Rectangle Fill="#FF00AADE" Height="12" Margin="0,114,0,0" Name="rectangle1" VerticalAlignment="Top" />
+        <ListBox HorizontalAlignment="Left" Margin="0,152,0,0" Width="183" Name="lst_tabelas" SelectionChanged="lst_tabelas_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Margin="188,152,0,0" Width="115" Name="lst_colunas" SelectionChanged="lst_colunas_SelectionChanged"/>
+        <Label Content="Tabelas" HorizontalAlignment="Left" Margin="0,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.296,0.679"/>
+        <Label Content="Colunas" HorizontalAlignment="Left" Margin="188,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.296,0.679"/>
+        <TextBox Height="140" Margin="308,152,10,0" TextWrapping="Wrap" Name="txt_sql" VerticalAlignment="Top" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+        <DataGrid Margin="308,297,10,0" Name="ogrid" AutoGenerateColumns="True"/>
+        <Button Height="63" HorizontalAlignment="Right" Margin="0,10,10,0" x:Name="btn_detalhar" VerticalAlignment="Top" Width="93" Click="btn_detalhar_Click">
+            <StackPanel>
+                <Image Source="/Atanor;component/Images/magnifyingglass6.png" Height="35" Width="39"/>
+                <Label Content="Gerar"/>
+            </StackPanel>
+        </Button>
+        <Button Height="63" HorizontalAlignment="Right" Margin="0,10,108,0" x:Name="btn_detalhar_Copy" VerticalAlignment="Top" Width="93" Click="btn_detalhar_Copy_Click_1">
+            <StackPanel>
+                <Image Source="/Atanor;component/Images/download168.png" Height="35" Width="39"/>
+                <Label Content="Salvar"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

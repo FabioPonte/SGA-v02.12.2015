@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Atanor.Menu.Modulos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="auto" Width="269" xmlns:my="clr-namespace:Atanor.Menu">
+    <Grid>
+        <StackPanel Orientation="Vertical" >
+            <my:MenuItemSGA Icone="/Atanor;component/Images/20150301010617696_easyicon_net_128.png" x:Name="menuItemSGA19" Nome="Alarme" Width="269" Margin="0,1" Click="alarme" />
+            <my:MenuItemSGA Icone="/Atanor;component/Images/add199.png" x:Name="menuItemSGA7" Nome="Usuários" Width="269" Margin="0,1" Click="menuItemSGA7_Click" />
+            <my:MenuItemSGA x:Name="menuItemSGA1" Width="269" Icone="/Atanor;component/Images/logistics3.png" Nome="Logística" Click="menuItemSGA1_Click" Margin="0,0,0,1"/>
+            <my:MenuItemSGA Icone="/Atanor;component/Images/metal4.png" x:Name="menuItemSGA2" Nome="Portaria" Width="269" Margin="0,0,0,1" Click="menuItemSGA2_Click" />
+            <my:MenuItemSGA Icone="/Atanor;component/Images/files4.png" x:Name="menuItemSGA3" Nome="Supply Chain" Width="269" Click="menuItemSGA3_Click" Margin="0,0,0,1"/>
+            <my:MenuItemSGA Icone="/Atanor;component/Images/seo2%20%281%29.png" x:Name="menuItemSGA4" Nome="Relatórios" Width="269" Margin="0,0,0,1" Click="menuItemSGA4_Click"/>
+            <my:MenuItemSGA Icone="/Atanor;component/Images/check4.png" x:Name="menuItemSGA6" Nome="Correção Lote" Width="269" Margin="0,0,0,1" Click="menuItemSGA6_Click" />
+            <my:MenuItemSGA Icone="/Atanor;component/Images/packages2.png" x:Name="menuItemSGA8" Nome="Expedição" Width="269" Margin="0,0,0,1" Click="menuItemSGA8_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

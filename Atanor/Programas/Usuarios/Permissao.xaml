@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Atanor.Programas.Usuarios.Permissao"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+               d:DesignHeight="676" d:DesignWidth="963" xmlns:my="clr-namespace:ThemaMeritor;assembly=ThemaMeritor" Loaded="UserControl_Loaded" Name="fabricantes" Tag="estados">
+    <Grid >
+        
+        <Rectangle Height="126" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Atanor;component/Images/barra.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Height="96" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" Stretch="Uniform" VerticalAlignment="Top" Width="96" Source="/Atanor;component/Images/lock7.png" SnapsToDevicePixels="True" />
+        <Label Content="Permissões de Usuário" Height="41" HorizontalAlignment="Left" Margin="114,12,0,0" Name="label1" VerticalAlignment="Top" FontSize="24" Foreground="White" />
+        <Rectangle Height="12" Margin="0,114,0,0" Name="rectangle1" VerticalAlignment="Top" Fill="#FF00AADE" />
+
+        
+                <Label Content="Usuário:" Height="28" HorizontalAlignment="Left" Margin="9,147,0,0" Name="label2" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="73,147,0,0" Name="cbo_nome" VerticalAlignment="Top" Width="424" SelectionChanged="cbo_nome_SelectionChanged" />
+                <ListBox Margin="9,183,9,6" Name="agrid" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Background="AntiqueWhite" Margin="1" Orientation="Horizontal" ItemHeight="250" ItemWidth="250" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+                <Button Content="Editar" Height="33" HorizontalAlignment="Right" Margin="0,142,12,0" Name="button1" VerticalAlignment="Top" Width="98" Click="button1_Click" />
+    </Grid>
+</UserControl>

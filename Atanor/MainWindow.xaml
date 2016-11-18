@@ -1,0 +1,27 @@
+﻿<Window x:Class="Atanor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SGA" Height="353" Width="743" 
+         xmlns:tb="http://www.hardcodet.net/taskbar"
+        AllowsTransparency="True" ResizeMode="CanResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/Atanor;component/Images/LOGO.png" xmlns:my="clr-namespace:Thema;assembly=Thema"  >
+    <Grid>
+        <tb:TaskbarIcon
+            x:Name="MyNotifyIcon"
+            IconSource="/Images/flame.ico"
+            ToolTipText="SGA SYSTEM 2.0" TrayLeftMouseDown="MyNotifyIcon_TrayLeftMouseDown" />
+        
+        <my:Janela Maximizar="False" Redmensionar="False" Minimizar="False" PreverErros="False" />
+        <Rectangle Fill="#313338" Margin="8,26,8,8"></Rectangle>
+            <Label Content="Usuário:" Height="35" HorizontalAlignment="Left" Margin="307,127,0,0" Name="label1" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" />
+                <Label Content="Senha:" Height="35" HorizontalAlignment="Left" Margin="315,169,0,0" Name="label2" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" />
+                <TextBox Margin="382,127,12,0" Name="txt_usuario" VerticalAlignment="Top" FontSize="26" Height="35" />
+                <PasswordBox Height="35" Margin="382,169,12,0" Name="txt_senha" VerticalAlignment="Top" FontSize="26" KeyDown="txt_senha_KeyDown" />
+                <Button Content="Login" Height="47" Margin="0,0,12,12" Name="button1" VerticalAlignment="Bottom" Click="button1_Click" HorizontalAlignment="Right" Width="118" />
+        <Image Height="245" HorizontalAlignment="Left" Margin="43,69,0,0" Name="image2" SnapsToDevicePixels="True" Source="/Atanor;component/Images/Big-Flame-Icon.png" Stretch="Uniform" VerticalAlignment="Top" Width="238" />
+                <Label Content="Base:" Height="35" HorizontalAlignment="Left" Margin="323,210,0,0" Name="label3" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" />
+                <ComboBox Height="35" Margin="382,210,12,0" Name="cbo_base" VerticalAlignment="Top" SelectionChanged="cbo_base_SelectionChanged" FontSize="18" />
+        <Rectangle Fill="#7F000000" Name="FundoAlerta" Width="0" />
+        <Image Height="41" HorizontalAlignment="Left" Margin="341,50,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="302" Source="/Atanor;component/Images/logo2.fw.png" />
+        <Button Content="Redefinir Senha" Height="47" Margin="0,0,135,12" x:Name="button1_Copy" VerticalAlignment="Bottom" Click="button2_Click" HorizontalAlignment="Right" Width="118" />
+    </Grid>
+</Window>

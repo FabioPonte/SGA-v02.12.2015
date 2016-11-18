@@ -1,0 +1,25 @@
+﻿<UserControl xmlns:TaskMenu="clr-namespace:Atanor.TaskMenu"  x:Class="Atanor.Programas.Expedicao.Entrega"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Atanor.Programas.Expedicao"
+             mc:Ignorable="d"  d:DesignHeight="468" d:DesignWidth="850">
+    <Grid >
+        <TaskMenu:PacoteManutencao x:Name="pacote1" Width="Auto" />
+        <ListBox x:Name="ogrid" HorizontalAlignment="Left" Margin="10,102,0,24" Width="234" SelectionChanged="lst_lista_SelectionChanged"/>
+        <Label x:Name="label" Content="Notas:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Data da Entrega:" HorizontalAlignment="Left" Margin="261,245,0,0" VerticalAlignment="Top"/>
+        <Calendar x:Name="dt_data" HorizontalAlignment="Left" Margin="261,276,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Cliente:" HorizontalAlignment="Left" Margin="261,79,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy" Content="Cidade:" HorizontalAlignment="Left" Margin="261,110,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy1" Content="Data Expedição:" HorizontalAlignment="Left" Margin="261,172,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy2" Content="Romaneio:" HorizontalAlignment="Left" Margin="261,203,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_cliente" Content="" Margin="380,79,34,0" VerticalAlignment="Top" Tag="cliente"/>
+        <Label x:Name="lbl_cidade" Content="" Margin="380,110,34,0" VerticalAlignment="Top" Tag="cidade"/>
+        <Label x:Name="lbl_data_expedicao" Content="" Margin="380,172,34,0" VerticalAlignment="Top" Tag="expedicao"/>
+        <Label x:Name="lbl_romaneio" Content="" Margin="380,203,34,0" VerticalAlignment="Top" Tag="romaneio"/>
+        <Label x:Name="label1_Copy3" Content="Estado:" HorizontalAlignment="Left" Margin="261,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_estado" Content="" Margin="380,141,34,0" VerticalAlignment="Top" Tag="estado"/>
+    </Grid>
+</UserControl>

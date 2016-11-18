@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Atanor.TaskMenu.ButtonTask"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30
+             "  MinWidth="100" Width="auto" Loaded="UserControl_Loaded" d:DesignWidth="160" xmlns:my="clr-namespace:ThemaMeritor;assembly=ThemaMeritor">
+	
+	
+    <Grid Cursor="Hand" SnapsToDevicePixels="True">
+        <Button Name="clique" Opacity="1" Click="clique_Click" Foreground="#FF616161" >
+            <Grid Width="155" Height="30">
+                <Image Height="24" Name="icon" Source="/Atanor;component/Images/browser68.png" Margin="7,3,0,3" HorizontalAlignment="Left" Width="25" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                <Label Content="Analisador" Name="texto" Height="30" Margin="31,-1,32,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                <my:Sair HorizontalAlignment="Right" Margin="0,5,4,5" Name="sair1" Click="sair1_Click" />
+            </Grid>
+        </Button>
+
+    </Grid>
+</UserControl>

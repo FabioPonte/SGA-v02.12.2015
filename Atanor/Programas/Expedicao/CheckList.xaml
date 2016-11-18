@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Atanor.Programas.Expedicao.CheckList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Atanor.Programas.Expedicao"
+             mc:Ignorable="d" 
+             d:DesignHeight="495" d:DesignWidth="1040" 
+             xmlns:my="clr-namespace:ThemaMeritor;assembly=ThemaMeritor">
+    <Grid Background="White" >
+        <Label Content="CHECK LIST – VERIFICAÇÃO DE VEÍCULOS" Height="41" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" FontSize="24" Foreground="Black" />
+        <Label Content="Transportadora:" Height="28" HorizontalAlignment="Left" Margin="23,69,0,0" x:Name="label6" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="131,71,0,0" x:Name="cbo_transportadora" VerticalAlignment="Top" Width="215" />
+        <Label Content="Motorista:" Height="28" HorizontalAlignment="Left" Margin="54,99,0,0" x:Name="label8" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="131,99,0,0" x:Name="cbo_motorista" VerticalAlignment="Top" Width="206"  />
+        <Button Height="23" HorizontalAlignment="Left" Margin="298,99,0,0" x:Name="button3" VerticalAlignment="Top" Width="48" Click="button3_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <Label Content="Placa Caminhão:" Height="28" HorizontalAlignment="Left" Margin="23,127,0,0" x:Name="label9" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="131,127,0,0" x:Name="cbo_caminhao" VerticalAlignment="Top" Width="206"  />
+        <Button Height="23" HorizontalAlignment="Left" Margin="298,127,0,0" x:Name="button2" VerticalAlignment="Top" Width="48" Click="button2_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <Button Height="84" HorizontalAlignment="Right" Margin="0,69,40,0" x:Name="buttonq" VerticalAlignment="Top" Width="117" Click="buttonq_Click" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+                <Label Content="CheckList"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

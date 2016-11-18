@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Atanor.Programas.Portaria.AvisoRecebimento"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="841" Loaded="UserControl_Loaded">
+    <Grid Background="White" Loaded="Grid_Loaded">
+        <Image Height="64" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="64" Source="/Atanor;component/Images/google_alerts-64.png" />
+        <Label Content="Aviso de Recebimento" Height="Auto" HorizontalAlignment="Left" Margin="82,24,0,0" Name="label1" VerticalAlignment="Top" FontSize="25" Foreground="#FF454545" />
+        <Image Height="28" Margin="0,65,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Source="/Atanor;component/Images/linha1.png" />
+        <Label Content="Empresa/Fornecedor:" Height="28" HorizontalAlignment="Left" Margin="12,111,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Produto/Serviço:" Height="28" HorizontalAlignment="Left" Margin="12,148,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Placa do Automóvel:" Height="28" HorizontalAlignment="Left" Margin="12,185,0,0" Name="label4" VerticalAlignment="Top" />
+        <Label Content="CPF do Motorista/Responsável:" Height="28" HorizontalAlignment="Left" Margin="12,279,0,0" Name="label5" VerticalAlignment="Top" />
+        <Label Content="Nome do Motorista/Responsável:" Height="28" HorizontalAlignment="Left" Margin="12,227,0,0" Name="label6" VerticalAlignment="Top" />
+        <Label Content="CNH do Motorista/Responsável:" Height="28" HorizontalAlignment="Left" Margin="12,313,0,0" Name="label7" VerticalAlignment="Top" />
+        <Button Content="Cadastrar Aviso" Height="48" HorizontalAlignment="Right" Margin="0,0,12,12" Name="btn_cadastro_aviso" VerticalAlignment="Bottom" Width="134" Click="btn_cadastro_aviso_Click" />
+        <ComboBox Height="31" IsEditable="True" Margin="221,111,263,0" Name="cbo_empresa" VerticalAlignment="Top" IsReadOnly="True" />
+        <ComboBox Height="31" IsEditable="True" Margin="221,148,263,0" Name="cbo_servico" VerticalAlignment="Top" />
+        <ComboBox Height="31" IsEditable="True" Margin="221,185,342,0" Name="cbo_placa" VerticalAlignment="Top" IsReadOnly="True" />
+        <ComboBox Height="31" IsEditable="True" Margin="221,227,342,0" Name="cbo_motorista" VerticalAlignment="Top" SelectionChanged="cbo_motorista_SelectionChanged" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="221,279,0,0" Name="txt_cnh" VerticalAlignment="Top" Width="278" IsReadOnly="True" Tag="cpf" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="221,318,0,0" Name="txt_cpf" VerticalAlignment="Top" Width="278" IsReadOnly="True" Tag="cnh" />
+        <Button Height="31" HorizontalAlignment="Right" Margin="0,111,263,0" Name="button1" VerticalAlignment="Top" Width="48" Click="button1_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <Button Height="31" HorizontalAlignment="Right" Margin="0,185,342,0" Name="button3" VerticalAlignment="Top" Width="48" Click="button3_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <Button Height="31" HorizontalAlignment="Right" Margin="0,227,342,0" Name="button4" VerticalAlignment="Top" Width="48" Click="button4_Click">
+            <Image Source="/Atanor;component/Images/procurar.png" Width="30" />
+        </Button>
+        <Label Content="Número da Nota Fiscal:" Height="28" HorizontalAlignment="Left" Margin="12,381,0,0" Name="label8" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="221,381,0,0" Name="txt_nota" VerticalAlignment="Top" Width="278" />
+        <Label Content="Número do Container:" Height="28" HorizontalAlignment="Left" Margin="10,414,0,0" x:Name="label8_Copy" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="False" Margin="221,414,0,0" x:Name="txt_conteiner" VerticalAlignment="Top" Width="278" />
+    </Grid>
+</UserControl>

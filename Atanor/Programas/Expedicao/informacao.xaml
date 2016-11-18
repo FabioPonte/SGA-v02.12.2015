@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="Atanor.Programas.Expedicao.informacao"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="1040"
+              xmlns:my="clr-namespace:ThemaMeritor;assembly=ThemaMeritor"  
+             xmlns:my1="clr-namespace:SGAPizza;assembly=SGAPizza" Height="auto"
+             xmlns:my2="clr-namespace:Atanor.Facilitadores" d:DesignHeight="667">
+    <Grid >
+        <GroupBox Header="Nota Fiscal" Height="72" VerticalAlignment="Top" Margin="10,10,10,0">
+            <Grid>
+        <Label Content="CD:" Height="28" HorizontalAlignment="Left" Margin="10,9,0,0" x:Name="label18" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="49,10,0,0" x:Name="cbo_cd" VerticalAlignment="Top" Width="192" />
+        <Label Content="Nota:" Height="28" HorizontalAlignment="Left" Margin="250,9,0,0" x:Name="label18_Copy" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Name="txt_nota" Height="23" Margin="294,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
+        <Button Content="Pesquisar" HorizontalAlignment="Left" Margin="491,10,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Button_Click_1"/>
+            </Grid>
+        </GroupBox>
+
+        <TabControl Margin="10,87,10,10">
+            <TabItem Header="Cliente">
+                <Grid Background="#FFE5E5E5">
+                        <Grid Background="White" Height="580">
+                            <Label Content="Nota:" Height="28" HorizontalAlignment="Left" Margin="301,77,0,0" x:Name="label18_Copy1" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="364,77,0,0" x:Name="nota" VerticalAlignment="Top" />
+                            <Label Content="Data:" Height="28" HorizontalAlignment="Left" Margin="22,77,0,0" x:Name="label18_Copy3" VerticalAlignment="Top" RenderTransformOrigin="0.649,1.036" FontWeight="Bold" />
+                        <Label Content="Estado:" Height="28" HorizontalAlignment="Left" Margin="22,110,0,0" x:Name="label18_Copy5" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="Cidade:" Height="28" HorizontalAlignment="Left" Margin="301,110,0,0" x:Name="label18_Copy6" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="Bairro:" Height="28" HorizontalAlignment="Left" Margin="22,143,0,0" x:Name="label18_Copy7" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="Rua:" Height="28" HorizontalAlignment="Left" Margin="301,143,0,0" x:Name="label18_Copy8" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="Cep:" Height="28" HorizontalAlignment="Left" Margin="301,176,0,0" x:Name="label18_Copy9" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="Pais:" Height="28" HorizontalAlignment="Left" Margin="22,176,0,0" x:Name="label18_Copy10" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="Telefone:" Height="28" HorizontalAlignment="Left" Margin="22,211,0,0" x:Name="label18_Copy11" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="E-mail:" Height="28" HorizontalAlignment="Left" Margin="22,244,0,0" x:Name="label18_Copy12" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="Cnpj:" Height="28" HorizontalAlignment="Left" Margin="22,272,0,0" x:Name="label18_Copy13" VerticalAlignment="Top" FontWeight="Bold" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="85,77,0,0" x:Name="data" VerticalAlignment="Top" />
+                            <Label Content="" Height="auto" HorizontalAlignment="Left" Margin="22,21,0,0" x:Name="cliente" VerticalAlignment="Top" FontSize="30"/>
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="85,110,0,0" x:Name="estado" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="364,110,0,0" x:Name="cidade" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="85,143,0,0" x:Name="bairro" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="364,143,0,0" x:Name="rua" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="364,176,0,0" x:Name="cep" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="85,176,0,0" x:Name="pais" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="85,211,0,0" x:Name="telefone" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="85,244,0,0" x:Name="email" VerticalAlignment="Top" />
+                            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="85,272,0,0" x:Name="cnpj" VerticalAlignment="Top" />
+                        </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Nota">
+                <Grid Background="#FFFFFFFF">
+                    <Label Content="Cfop:" Height="28" HorizontalAlignment="Left" Margin="336,10,0,0" x:Name="label18_Copy2" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Cfaz:" Height="28" HorizontalAlignment="Left" Margin="336,38,0,0" x:Name="label18_Copy14" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Valor:" Height="28" HorizontalAlignment="Left" Margin="336,66,0,0" x:Name="label18_Copy15" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Dif Valor:" Height="28" HorizontalAlignment="Left" Margin="336,94,0,0" x:Name="label18_Copy16" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="441,10,0,0" x:Name="cfop" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="441,38,0,0" x:Name="cfaz" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="441,66,0,0" x:Name="valor" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="441,94,0,0" x:Name="dif_valor" VerticalAlignment="Top" />
+                    <Label Content="Embalagem:" Height="28" HorizontalAlignment="Left" Margin="792,38,0,0" x:Name="label18_Copy19" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Qtd Embalagem:" Height="28" HorizontalAlignment="Left" Margin="792,66,0,0" x:Name="label18_Copy20" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Peso Bruto:" Height="28" HorizontalAlignment="Left" Margin="792,94,0,0" x:Name="label18_Copy21" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Peso Liquido:" Height="28" HorizontalAlignment="Left" Margin="792,122,0,0" x:Name="label18_Copy22" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="897,38,0,0" x:Name="embalagem" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="897,66,0,0" x:Name="qtd_embalagem" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="897,94,0,0" x:Name="peso_bruto" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="897,122,0,0" x:Name="peso_liquido" VerticalAlignment="Top" />
+                    <Label Content="Expedia:" Height="28" HorizontalAlignment="Left" Margin="12,10,0,0" x:Name="label18_Copy24" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Data:" Height="28" HorizontalAlignment="Left" Margin="12,38,0,0" x:Name="label18_Copy25" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Criador:" Height="28" HorizontalAlignment="Left" Margin="12,66,0,0" x:Name="label18_Copy26" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Romaneio:" Height="28" HorizontalAlignment="Left" Margin="12,94,0,0" x:Name="label18_Copy27" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Motorista:" Height="28" HorizontalAlignment="Left" Margin="12,122,0,0" x:Name="label18_Copy23" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Placa:" Height="28" HorizontalAlignment="Left" Margin="792,5,0,0" x:Name="label18_Copy28" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="75,10,0,0" x:Name="expedido" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="75,38,0,0" x:Name="data_expedido" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="75,66,0,0" x:Name="acriador" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="82,94,0,0" x:Name="romaneio" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="81,122,0,0" x:Name="amotorista" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="897,5,0,0" x:Name="aplaca" VerticalAlignment="Top" />
+                    <DataGrid Margin="10,171,10,10" x:Name="ogrid"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Transportadora">
+                <Grid Background="#FFFFFFFF">
+                    <Label Content="Transportadora:" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="label18_Copy17" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="Cnpj:" Height="28" HorizontalAlignment="Left" Margin="10,38,0,0" x:Name="label18_Copy18" VerticalAlignment="Top" FontWeight="Bold" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="115,10,0,0" x:Name="transportadora" VerticalAlignment="Top" />
+                    <Label Content="" Height="28" HorizontalAlignment="Left" Margin="115,38,0,0" x:Name="cnpj_transp" VerticalAlignment="Top" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Frete">
+                <Grid Background="#FFFFFFFF">
+                    <Label Content="Nota:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Frete Esperado:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Frete Cobrado:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Dif::" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Fatura:" HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Icms:" HorizontalAlignment="Left" Margin="278,41,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Valor Do Pallet:" HorizontalAlignment="Left" Margin="278,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Mix:" HorizontalAlignment="Left" Margin="278,103,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Data da Entrega:" HorizontalAlignment="Left" Margin="564,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Name="lbl_nota" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_esperado" HorizontalAlignment="Left" Margin="105,41,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_cobrado" HorizontalAlignment="Left" Margin="105,72,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_dif" HorizontalAlignment="Left" Margin="105,103,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_fatura" HorizontalAlignment="Left" Margin="375,10,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_icms" HorizontalAlignment="Left" Margin="375,41,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_valor" HorizontalAlignment="Left" Margin="375,72,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_mix" HorizontalAlignment="Left" Margin="375,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.359,2.154"/>
+                    <Label x:Name="lbl_data" HorizontalAlignment="Left" Margin="667,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.359,2.154"/>
+                </Grid>
+            </TabItem>
+            
+        </TabControl>
+
+       
+       
+
+    </Grid>
+</UserControl>

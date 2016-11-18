@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Atanor.Programas.Suplly.DetalhedoHistoricoDelote"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Atanor.Programas.Suplly"
+             mc:Ignorable="d" 
+             d:DesignHeight="504" d:DesignWidth="1051" xmlns:my="clr-namespace:ThemaMeritor;assembly=ThemaMeritor" Loaded="UserControl_Loaded">
+    <Grid Name="Transportadoras" Background="White">
+        <Rectangle Height="117" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Atanor;component/Images/barra.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Height="96" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" SnapsToDevicePixels="True" Source="/Atanor;component/Images/search102.png" Stretch="Uniform" VerticalAlignment="Top" Width="96" />
+        <Label Content="Detalhe do Historico de Lotes" FontSize="24" Height="41" HorizontalAlignment="Left" Margin="114,12,0,0" Name="label1" VerticalAlignment="Top" Foreground="White" />
+        <Rectangle Fill="#FF00AADE" Height="12" Margin="0,114,0,0" Name="rectangle1" VerticalAlignment="Top" />
+
+        
+
+        
+                    
+                        <DataGrid AutoGenerateColumns="True"  Name="ogrid" SelectionChanged="ogrid_SelectionChanged" Margin="0,164,0,0" />
+        <my:DataGridFiltro Height="Auto" HorizontalAlignment="Right" Margin="0,131,25,0" Name="dataGridFiltro1" VerticalAlignment="Top" />                
+                    
+                
+            
+        
+        <Button Height="63" HorizontalAlignment="Right" IsEnabled="True" Margin="0,12,25,0" Name="btn_detalhar" VerticalAlignment="Top" Width="93" Click="btn_detalhar_Click">
+            <StackPanel>
+                <Image Height="35" Source="/Atanor;component/Images/refresh27.png" Width="39" />
+                <Label Content="Atualizar" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

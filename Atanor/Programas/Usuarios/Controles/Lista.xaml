@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Atanor.Programas.Usuarios.Controles.Lista"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+            Height="250" d:DesignWidth="244" MinWidth="244" Loaded="UserControl_Loaded">
+    <Grid>
+        <Rectangle  Name="rectangle2" Stroke="{x:Null}" VerticalAlignment="Top" Height="250">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Atanor;component/Images/barra2.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="35" Name="rectangle1" Stroke="{x:Null}" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Atanor;component/Images/barra.png" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Logística" Height="35" Name="lbl_grupo" VerticalAlignment="Top" FontSize="17" Foreground="White" FontWeight="Bold" FontFamily="Tahoma" />
+        <ScrollViewer Margin="0,35,0,0" Name="scrollViewer1">
+            <StackPanel Name="ogrid">
+                
+            </StackPanel>
+        </ScrollViewer>
+        <Button  Height="23" HorizontalAlignment="Right" Margin="0,3,6,0" Name="button1" VerticalAlignment="Top" Width="43" Click="button1_Click">
+            <Image Source="/Atanor;component/Images/check.png"></Image>
+        </Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Atanor.Menu.Usuarios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              Height="auto" d:DesignWidth="269" xmlns:my="clr-namespace:Atanor.Menu">
+    <Grid>
+        <Button Content="Voltar Menu Anterior" Height="23" Margin="12,12,12,0" Name="btn_voltar" VerticalAlignment="Top" Click="btn_voltar_Click" />
+        <StackPanel Orientation="Vertical" Margin="0,41,0,0">
+            <my:MenuItemSGA HorizontalAlignment="Left" Margin="0,1,0,0" x:Name="menuItemSGA1" VerticalAlignment="Top" Width="269" Nome="Cadastro de Usuários" Icone="/Atanor;component/Images/add199.png" Click="menuItemSGA1_Click_1" />
+            <my:MenuItemSGA HorizontalAlignment="Left" Margin="0,1,0,0" x:Name="menuItemSGA2" VerticalAlignment="Top" Width="269" Nome="Tipos de Usuários" Icone="/Atanor;component/Images/man343.png" Click="menuItemSGA1_Click" />
+            <my:MenuItemSGA HorizontalAlignment="Left" Icone="/Atanor;component/Images/lock7.png" Margin="0,1,0,0" x:Name="menuItemSGA3" Nome="Permissões de Usuários" VerticalAlignment="Top" Width="269" Click="menuItemSGA3_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

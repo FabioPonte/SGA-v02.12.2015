@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Atanor.TaskMenu.NotificationTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="auto" d:DesignWidth="340"  Loaded="UserControl_Loaded" d:DesignHeight="256">
+    <Grid Name="ogrid" Background="White" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+        <Rectangle Width="340" Height="120" ></Rectangle>
+        <Label Content="" Height="28" Name="lbl_empresa" VerticalAlignment="Top" FontFamily="Lucida Console" FontSize="14" FontWeight="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="#FFB85858" />
+        <Label Content="Serviço/Produto:" FontFamily="Lucida Console" FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="0,31,0,0" Name="label2" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="152" />
+        <Label Content="" FontFamily="Lucida Console" FontSize="11" FontWeight="Normal" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="157,31,0,0" Name="lbl_servico" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="183" />
+        <Label Content="Placa:" FontFamily="Lucida Console" FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="0,55,0,0" Name="label4" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="152" />
+        <Label Content="" FontFamily="Lucida Console" FontSize="11" FontWeight="Normal" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="157,55,0,0" Name="lbl_placa" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="183" />
+        <Label Content="Motorista:" FontFamily="Lucida Console" FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="0,81,0,0" Name="label6" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="152" />
+        <Label Content="" FontFamily="Lucida Console" FontSize="11" FontWeight="Normal" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="157,81,0,0" Name="lbl_motorista" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="183" />
+        <Label Content="Nota:" FontFamily="Lucida Console" FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="0,107,0,0" Name="label8" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="152" />
+        <Label Content="" FontFamily="Lucida Console" FontSize="11" FontWeight="Normal" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="157,107,0,0" Name="lbl_nota" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="183" />
+        <Label Content="Data:" FontFamily="Lucida Console" FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="0,134,0,0" Name="label10" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="152" />
+        <Label Content="" FontFamily="Lucida Console" FontSize="11" FontWeight="Normal" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="157,134,0,0" Name="lbl_data" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="183" />
+        <Button Content="Estou Avisado" Height="29" Margin="12,0,12,12" Name="btn_avisado" VerticalAlignment="Bottom" Click="btn_avisado_Click" />
+        <Label Content="Tempo Espera:" FontFamily="Lucida Console" FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="0,184,0,0" Name="label1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="152" />
+        <Label FontFamily="Lucida Console" FontSize="11" FontWeight="Normal" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="157,184,0,0" Name="lbl_espera" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="183" >
+
+        </Label>
+        <Label Content="Container:" FontFamily="Lucida Console" FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="0,159,0,0" x:Name="label1_Copy" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="152" />
+        <Label FontFamily="Lucida Console" FontSize="11" FontWeight="Normal" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="157,159,0,0" x:Name="lbl_container" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="183" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Atanor.Programas.Portaria.CadastroItemIO"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Atanor.Programas.Portaria"
+              xmlns:TaskMenu="clr-namespace:Atanor.TaskMenu"
+             xmlns:ThemaMeritor="clr-namespace:ThemaMeritor;assembly=ThemaMeritor" 
+             mc:Ignorable="d"
+             d:DesignHeight="495" d:DesignWidth="1024" >
+    <Grid Background="White">
+        <TaskMenu:PacoteManutencao x:Name="pacote1"/>
+        <DataGrid x:Name="ogrid" Margin="10,165,10,10" SelectionChanged="ogrid_SelectionChanged"/>
+        <Label x:Name="label" VerticalAlignment="Top" Margin="10,71,0,0" HorizontalAlignment="Left" Content="Nome:"/>
+        <TextBox x:Name="txt_nome" Width="435" VerticalAlignment="Top" Text="" TextWrapping="Wrap" Margin="82,74,0,0" Height="23" HorizontalAlignment="Left"/>
+        <ThemaMeritor:DataGridFiltro HorizontalAlignment="Right" Margin="0,129,10,0" x:Name="dataGridFiltro1" VerticalAlignment="Top" />
+        <Label x:Name="label_Copy" VerticalAlignment="Top" Margin="10,99,0,0" HorizontalAlignment="Left" Content="Marca:"/>
+        <TextBox x:Name="txt_marca" Width="435" VerticalAlignment="Top" Text="" TextWrapping="Wrap" Margin="82,102,0,0" Height="23" HorizontalAlignment="Left"/>
+        <Label x:Name="label_Copy1" VerticalAlignment="Top" Margin="10,127,0,0" HorizontalAlignment="Left" Content="Fabricante:"/>
+        <TextBox x:Name="txt_fabricante" Width="435" VerticalAlignment="Top" Text="" TextWrapping="Wrap" Margin="82,130,0,0" Height="23" HorizontalAlignment="Left"/>
+    </Grid>
+</UserControl>
