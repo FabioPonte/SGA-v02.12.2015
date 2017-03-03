@@ -27,6 +27,11 @@ namespace Atanor.Programas.Suplly
         {
             
             cal_passo_fundo.Add("1002-SYSTEM-BIN-LOCATION");
+            // Fabio Ponte 30/11/16
+            cal_passo_fundo.Add("1002-ZN 26 AVARIAS");
+            cal_passo_fundo.Add("1002-ZN 28 BLOQUEADO");
+
+
             //cal_passo_fundo.Add("1002-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM");
             cal_passo_fundo.Add("1002-ZN 2 ENTREGA FUTURA");
             cal_passo_fundo.Add("1002-ZN 3 DEVOLUÇÃO");
@@ -35,28 +40,51 @@ namespace Atanor.Programas.Suplly
             //cal_pato_branco.Add("2002-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM");
             cal_pato_branco.Add("2002-ZN 2 ENTREGA FUTURA");
             cal_pato_branco.Add("2002-ZN 3 DEVOLUÇÃO");
+
+            //Fabio Ponte 30/11/16
+            cal_pato_branco.Add("2002-ZN 26 AVARIAS");
+            cal_pato_branco.Add("2002-ZN 28 BLOQUEADO");
+
+
             //cal_pato_branco.Add("2002-ZN 8 SEGREGADO PARA AVALIACAO");
             cal_xanxere.Add("3001-SYSTEM-BIN-LOCATION");
             //cal_xanxere.Add("3001-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM");
             cal_xanxere.Add("3001-ZN 2 ENTREGA FUTURA");
+            
+            //Fabio Ponte 30/11/16
+            cal_xanxere.Add("3001-ZN 26 AVARIAS");
+            cal_xanxere.Add("3001-ZN 26 AVARIAS");
+
             cal_xanxere.Add("3001-ZN 3 DEVOLUÇÃO");
+
             //cal_xanxere.Add("3001-ZN 8 SEGREGADO PARA AVALIACAO");
             cal_xanxere.Add("3001-ZN9 PINHALZINHO");
+
+
             cal_resende.Add("4001-SYSTEM-BIN-LOCATION");
-            //cal_resende.Add("4001-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM");
             cal_resende.Add("4001-ZN 2 ENTREGA FUTURA");
             cal_resende.Add("4001-ZN 3 DEVOLUÇÃO");
             cal_resende.Add("4001-ZN 4 INTERDITADOS");
             cal_resende.Add("4001-ZN 5 QUARENTENA");
             cal_resende.Add("4002-SYSTEM-BIN-LOCATION");
-            //cal_resende.Add("4002-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM");
             cal_resende.Add("4002-ZN 2 ENTREGA FUTURA");
             cal_resende.Add("4002-ZN 3 DEVOLUÇÃO");
             cal_resende.Add("4002-ZN 4 INTERDITADOS");
             cal_resende.Add("4002-ZN 5 QUARENTENA");
             cal_resende.Add("4001-ZN1 ENTREGA FUTURA");
             cal_resende.Add("4002-ZN1 ENTREGA FUTURA");
-            cal_resende.Add("4003-ZN 29 ARMAZEM EXTERNO");
+            //cal_resende.Add("4003-ZN 29 ARMAZEM EXTERNO");
+            //Fábio Ponte 30/11/16
+            cal_resende.Add("4001-ZN 26 AVARIAS");
+            cal_resende.Add("4001-ZN 28 BLOQUEADO");
+            cal_resende.Add("4001-ZN 7 PRODUCAO");
+            cal_resende.Add("4002-ZN 26 AVARIAS");
+            cal_resende.Add("4002-ZN 28 BLOQUEADO");
+     
+
+
+
+
             //cal_resende.Add("4003-SYSTEM-BIN-LOCATION");
             //cal_resende.Add("4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM");
             //cal_resende.Add("4003-ZN 5 QUARENTENA");
@@ -66,7 +94,7 @@ namespace Atanor.Programas.Suplly
             //cal_resende.Add("4004-ZN 5 QUARENTENA");
             //cal_resende.Add("4004-ZN 7 PRODUCAO");
             //cal_resende.Add("4004-ZN6 IENS EM PROCESSO EXTERNO");
-            
+
             //cal_consagro.Add("7001-ZN 11 ESTOQUE EM TRÂNSITO IGARAPAVA");
             cal_consagro_igarapava.Add("7001-SYSTEM-BIN-LOCATION");
             cal_consagro_igarapava.Add("7001-ZN 12 DEVOLUÇÃO IGARAPAVA");
@@ -81,6 +109,8 @@ namespace Atanor.Programas.Suplly
             cal_consagro_igarapava.Add("7002-ZN 18 BLOQUEADO IGARAPAVA");
             cal_consagro_igarapava.Add("7002-ZN 20 ENTREGA FUTURA IGARAPAVA");
 
+            //Fabio Ponte  30/11/16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+            cal_consagro_igarapava.Add("7003-ZN 18 BLOQUEADO IGARAPAVA");
 
             cal_consagro_sumare.Add("7001-ZN 13 DEVOLUÇÃO SUMARÉ");
             cal_consagro_sumare.Add("7001-ZN 15 INTERDITADOS SUMARÉ");
@@ -94,6 +124,11 @@ namespace Atanor.Programas.Suplly
             cal_consagro_sumare.Add("7002-ZN 19 BLOQUEADO SUMARÉ");
             cal_consagro_sumare.Add("7002-ZN 21 ENTREGA FUTURA SUMARÉ");
             cal_consagro_sumare.Add("7002-ZN10 UTILIZAÇÃO LIVRE SUMARÉ");
+
+            //Fabio Ponte  30/11/16
+            cal_consagro_sumare.Add("7003-ZN 19 BLOQUEADO SUMARÉ");
+            cal_consagro_sumare.Add("7003-ZN10 UTILIZAÇÃO LIVRE SUMARÉ");
+
 
             //cal_consagro.Add("7001-ZN 22 TERCEIRO FMC");
             //cal_consagro.Add("7001-ZN 23 TERCEIRO SIPCAM");
@@ -132,7 +167,7 @@ namespace Atanor.Programas.Suplly
             //cal_consagro.Add("7004-ZN 24 TERCEIRO SERVATIS");
             //cal_consagro.Add("7004-ZN 25 TERCEIRO TAGMA");
             //cal_consagro.Add("7004-ZN10 UTILIZAÇÃO LIVRE SUMARÉ");
-            
+
             sql_passo_fundo = sql_passo_fundo.Replace("CONVERT", ArrumaWhere(cal_passo_fundo));
             sql_passo_fundo_SEM_SIGER = sql_passo_fundo_SEM_SIGER.Replace("CONVERT", ArrumaWhere(cal_passo_fundo));
 
@@ -164,7 +199,8 @@ namespace Atanor.Programas.Suplly
         private double C_PassoFundo = 2000000;
         private double C_PatoBranco = 1000000;
         private double C_Xanxere = 150000;
-        private double C_Resende = 4800000;
+        // private double C_Resende = 4800000;
+        private double C_Resende = 3000000;
 
         private double C_IGARAPAVA7001 = (1300 * 700);
         private double C_IGARAPAVA7002 = (1300 * 700);
@@ -581,66 +617,139 @@ namespace Atanor.Programas.Suplly
             //DataTable TodosItens = Select.SelectSQL("SELECT distinct numeroitem FROM sga.condicaoestoque where posicao like ('%SYSTEM-BIN-LOCATION%') and data ='" + adatatodositens + "'");
             //string ConsultaTodosItens ="select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao like ('%SYSTEM-BIN-LOCATION%') or posicao like ('%PINHALZINHO%') or posicao like ('%UTILIZAÇÃO LIVRE%') or posicao like ('%ARMAZEM EXTERNO%')) and posicao not like ('4003-SYSTEM-BIN-LOCATION') and posicao not like ('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM') and posicao not like ('4003-ZN 27 ARMAZEM EXTRENO') and posicao not like ('4003-ZN 5 QUARENTENA') and posicao not like ('4003-ZN 7 PRODUCAO') and posicao not like ('4003-ZN6 IENS EM PROCESSO EXTERNO')  and posicao not like ('%4004%') and posicao not like ('%7003%') and posicao not like ('%7004%') and data ='" + adatatodositens + "'  order by 2";
             string ConsultaTodosItens =" ";// Mudança da consulta para buscar o custo anterior  Fabio Ponte 25/08/16
-           
 
-            ConsultaTodosItens += " select a.f3,a.f4,a.f5,a.f6,a.f7,a.f8,b.f7 f9 ,concat(Right(cast(a.data as char(10)),2),'/',Right(Left(cast(a.data as char(10)),7),2),'/',Left(cast(a.data as char(10)),4))  f10 ,concat(Right(cast(b.data as char(10)),2),'/',Right(Left(cast(b.data as char(10)),7),2),'/',Left(cast(b.data as char(10)),4)) f11 ";
-            ConsultaTodosItens += " from(  ";
-            ConsultaTodosItens += " select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8,data  ";
-            ConsultaTodosItens += " from condicaoestoque  ";
-            ConsultaTodosItens += " where data ='" + adatatodositens + "'  ";
-            ConsultaTodosItens += " and custo > 0   ";
-            ConsultaTodosItens += " union all    ";
-            ConsultaTodosItens += " select trx.f3,trx.f4, trx.f5, trx.f6, ifnull(trz.f7, 0), ifnull(trx.f6, 0) * ifnull(trz.f7, 0) f8,trz.data    ";
-            ConsultaTodosItens += " from( ";
-            ConsultaTodosItens += " select  POSICAO f3, numeroitem f4, descricao f5, quantidade f6, custo f7, valor f8,data    ";
-            ConsultaTodosItens += " from condicaoestoque      ";
-            ConsultaTodosItens += " where  data ='" + adatatodositens + "'  ";
-            ConsultaTodosItens += " and custo = 0    ";
-            ConsultaTodosItens += " ) as trx left join (    ";
-            ConsultaTodosItens += " select  POSICAO f3, numeroitem f4, descricao f5, quantidade f6, custo f7, valor f8, max(data) data       ";
-            ConsultaTodosItens += " from logistica.condicaoestoque       ";
-            ConsultaTodosItens += " where  data <'" + adatatodositens + "'  ";
-            ConsultaTodosItens += " and custo > 0    ";
-            ConsultaTodosItens += " group by POSICAO, numeroitem ) as trz on trx.f3 = trz.f3 and trx.f4 = trz.f4  ) as a ";
-            ConsultaTodosItens += "  ";
-            ConsultaTodosItens += " Left join ( select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8,data  ";
-            ConsultaTodosItens += " from condicaoestoque  ";
-            ConsultaTodosItens += " where data ='" + Facilitadores.ConverterDataParaDataDoMysql.Converter(dataAnterior) + "'   ";
-            ConsultaTodosItens += " and custo > 0   ";
-            ConsultaTodosItens += " union all    ";
-            ConsultaTodosItens += " select trx.f3,trx.f4, trx.f5, trx.f6, ifnull(trz.f7, 0), ifnull(trx.f6, 0) * ifnull(trz.f7, 0) f8,trz.data    ";
-            ConsultaTodosItens += " from( ";
-            ConsultaTodosItens += " select  POSICAO f3, numeroitem f4, descricao f5, quantidade f6, custo f7, valor f8,data    ";
-            ConsultaTodosItens += " from condicaoestoque      ";
-            ConsultaTodosItens += " where  data ='" + Facilitadores.ConverterDataParaDataDoMysql.Converter(dataAnterior) + "'   ";
-            ConsultaTodosItens += " and ifnull(custo,0) = 0    ";
-            ConsultaTodosItens += " union all  ";
-            ConsultaTodosItens += " select  x.POSICAO f3, x.numeroitem f4, x.descricao f5, x.quantidade f6, x.custo f7, x.valor f8,x.data    ";
-            ConsultaTodosItens += " from condicaoestoque x  ";
-            ConsultaTodosItens += " left outer join condicaoestoque y   ";
-            ConsultaTodosItens += " on y.data ='" + Facilitadores.ConverterDataParaDataDoMysql.Converter(dataAnterior) + "'  and x.numeroitem = y.numeroitem and x.POSICAO = y.POSICAO   ";
-            ConsultaTodosItens += " where  x.data ='" + adatatodositens + "' ";
-            ConsultaTodosItens += " and y.numeroitem is null  ";
-            ConsultaTodosItens += " ) as trx left join (    ";
-            ConsultaTodosItens += " select  POSICAO f3, numeroitem f4, descricao f5, quantidade f6, custo f7, valor f8, max(data) data       ";
-            ConsultaTodosItens += " from logistica.condicaoestoque       ";
-            ConsultaTodosItens += " where  data <'" + Facilitadores.ConverterDataParaDataDoMysql.Converter(dataAnterior) + "'   ";
-            ConsultaTodosItens += " and custo > 0    ";
-            ConsultaTodosItens += " group by POSICAO, numeroitem ) as trz on trx.f3 = trz.f3 and trx.f4 = trz.f4  ) as b  on a.f3 = b.f3 and a.f4 = b.f4 ";
-            ConsultaTodosItens += " where (a.f3 like('%SYSTEM-BIN-LOCATION%')  ";
-            ConsultaTodosItens += " or a.f3 like('%PINHALZINHO%')  ";
-            ConsultaTodosItens += " or a.f3 like('%UTILIZAÇÃO LIVRE%')  ";
-            ConsultaTodosItens += " or a.f3 like('%ARMAZEM EXTERNO%'))  ";
-            ConsultaTodosItens += " and a.f3 not like ('4003-SYSTEM-BIN-LOCATION')  ";
-            ConsultaTodosItens += " and a.f3 not like('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM')  ";
-            ConsultaTodosItens += " and a.f3 not like('4003-ZN 27 ARMAZEM EXTRENO')  ";
-            ConsultaTodosItens += " and a.f3 not like('4003-ZN 5 QUARENTENA')  ";
-            ConsultaTodosItens += " and a.f3 not like('4003-ZN 7 PRODUCAO')  ";
-            ConsultaTodosItens += " and a.f3 not like('4003-ZN6 IENS EM PROCESSO EXTERNO')   ";
-            ConsultaTodosItens += " and a.f3 not like('%4004%')  ";
-            ConsultaTodosItens += " and a.f3 not like('%7003%')  ";
-            ConsultaTodosItens += " and a.f3 not like('%7004%')  ";
-            ConsultaTodosItens += "  order by 2 ";
+
+            ConsultaTodosItens += " select 	a.f3,"; 
+            ConsultaTodosItens += " 		a.f4,";
+            ConsultaTodosItens += "		a.f5,";
+            ConsultaTodosItens += "		a.f6,";
+            ConsultaTodosItens += "		a.f7,";
+            ConsultaTodosItens += "		a.f8,";
+            ConsultaTodosItens += "		b.f7 f9 ,";
+            ConsultaTodosItens += " concat(Right(cast(a.data as char(10)),2),'/',Right(Left(cast(a.data as char(10)),7),2),'/',Left(cast(a.data as char(10)),4)) f10 ,";
+            ConsultaTodosItens += " concat(Right(cast(b.data as char(10)),2),'/',Right(Left(cast(b.data as char(10)),7),2),'/',Left(cast(b.data as char(10)),4)) f11  ";
+            ConsultaTodosItens += " from(   ";
+            ConsultaTodosItens += "		select POSICAO f3,";
+            ConsultaTodosItens += "				numeroitem f4,";
+            ConsultaTodosItens += "				descricao f5,";
+            ConsultaTodosItens += "				quantidade f6,";
+            ConsultaTodosItens += "				custo f7,";
+            ConsultaTodosItens += "				valor f8,";
+            ConsultaTodosItens += "				data   ";
+            ConsultaTodosItens += "				from condicaoestoque";
+            ConsultaTodosItens += "				where data ='" + adatatodositens + "'  ";
+            ConsultaTodosItens += "				and custo > 0    ";
+            ConsultaTodosItens += "	union all     ";
+            ConsultaTodosItens += "				select  trx.f3,";
+            ConsultaTodosItens += "						trx.f4,";
+            ConsultaTodosItens += "						trx.f5, ";
+            ConsultaTodosItens += "						trx.f6,";
+            ConsultaTodosItens += "						ifnull(trz.f7, 0),";
+            ConsultaTodosItens += "						ifnull(trx.f6, 0) * ifnull(trz.f7, 0) f8,";
+            ConsultaTodosItens += "						trz.data     ";
+            ConsultaTodosItens += "	from(  ";
+            ConsultaTodosItens += "";
+            ConsultaTodosItens += "						select  POSICAO f3, ";
+            ConsultaTodosItens += "								numeroitem f4,";
+            ConsultaTodosItens += "								descricao f5, ";
+            ConsultaTodosItens += "								quantidade f6,";
+            ConsultaTodosItens += "								custo f7,";
+            ConsultaTodosItens += "								valor f8,";
+            ConsultaTodosItens += "								data     ";
+            ConsultaTodosItens += "									from condicaoestoque ";
+            ConsultaTodosItens += "									where  data = '" + adatatodositens + "'  "; ;
+            ConsultaTodosItens += "									and custo = 0     ";
+            ConsultaTodosItens += "	) as trx ";
+            ConsultaTodosItens += "		left join ( ";
+            ConsultaTodosItens += "						select tr2.Warehouse f3,";
+            ConsultaTodosItens += "								tr2.ItemCode f4,";
+            ConsultaTodosItens += "								tr2.CalcPrice f7,";
+            ConsultaTodosItens += "								tr2.DocDate  data";
+            ConsultaTodosItens += "								from logistica.custo tr2 ";
+            ConsultaTodosItens += "									inner join (  ";
+            ConsultaTodosItens += "										select ItemCode , ";
+            ConsultaTodosItens += "												Warehouse , ";
+            ConsultaTodosItens += "												max(DocDate) data ";
+            ConsultaTodosItens += "												from logistica.custo ";
+            ConsultaTodosItens += "													where DocDate <  '" + adatatodositens + "'  "; 
+            ConsultaTodosItens += "													and CalcPrice > 0  ";
+            ConsultaTodosItens += "													group by ItemCode, Warehouse ";
+            ConsultaTodosItens += "									)as tr1 ";
+            ConsultaTodosItens += "											ON tr1.ItemCode = tr2.ItemCode";
+            ConsultaTodosItens += "											and tr1.Warehouse = tr2.Warehouse";
+            ConsultaTodosItens += "											and tr1.data = tr2.DocDate";
+            ConsultaTodosItens += "		) as trz on trx.f3 = trz.f3 and trx.f4 = trz.f4";
+            ConsultaTodosItens += "";
+            ConsultaTodosItens += "		) as a";
+            ConsultaTodosItens += "	Left join ( ";
+            ConsultaTodosItens += "			select POSICAO f3,";
+            ConsultaTodosItens += "							numeroitem f4,";
+            ConsultaTodosItens += "							descricao f5,";
+            ConsultaTodosItens += "							quantidade f6,";
+            ConsultaTodosItens += "							custo f7,";
+            ConsultaTodosItens += "							valor f8,";
+            ConsultaTodosItens += "							data   ";
+            ConsultaTodosItens += "							from condicaoestoque ";
+            ConsultaTodosItens += "							where data ='" + Facilitadores.ConverterDataParaDataDoMysql.Converter(dataAnterior) + "' ";
+            ConsultaTodosItens += "							and custo > 0    ";
+            ConsultaTodosItens += "				union all     ";
+            ConsultaTodosItens += "							select  trx.f3,";
+            ConsultaTodosItens += "									trx.f4,";
+            ConsultaTodosItens += "									trx.f5, ";
+            ConsultaTodosItens += "									trx.f6,";
+            ConsultaTodosItens += "									ifnull(trz.f7, 0),";
+            ConsultaTodosItens += "									ifnull(trx.f6, 0) * ifnull(trz.f7, 0) f8,";
+            ConsultaTodosItens += "									trz.data     ";
+            ConsultaTodosItens += "				from(  ";
+            ConsultaTodosItens += "";
+            ConsultaTodosItens += "									select  POSICAO f3,";
+            ConsultaTodosItens += "											numeroitem f4,";
+            ConsultaTodosItens += "											descricao f5, ";
+            ConsultaTodosItens += "											quantidade f6,";
+            ConsultaTodosItens += "											custo f7,";
+            ConsultaTodosItens += "											valor f8,";
+            ConsultaTodosItens += "											data     ";
+            ConsultaTodosItens += "												from condicaoestoque ";
+            ConsultaTodosItens += "												where  data ='" + adatatodositens + "' ";
+            ConsultaTodosItens += "												and custo = 0     ";
+            ConsultaTodosItens += "				) as trx ";
+            ConsultaTodosItens += "					left join ( ";
+            ConsultaTodosItens += "									select tr2.Warehouse f3, ";
+            ConsultaTodosItens += "											tr2.ItemCode f4,";
+            ConsultaTodosItens += "											tr2.CalcPrice f7,";
+            ConsultaTodosItens += "											tr2.DocDate  data";
+            ConsultaTodosItens += "											from logistica.custo tr2 ";
+            ConsultaTodosItens += "												inner join (  ";
+            ConsultaTodosItens += "													select ItemCode ,";
+            ConsultaTodosItens += "															Warehouse ,";
+            ConsultaTodosItens += "															max(DocDate) data";
+            ConsultaTodosItens += "															from logistica.custo ";
+            ConsultaTodosItens += "																where DocDate <'" + Facilitadores.ConverterDataParaDataDoMysql.Converter(dataAnterior) + "'  ";
+            ConsultaTodosItens += "																and CalcPrice > 0  ";
+            ConsultaTodosItens += "																group by ItemCode, Warehouse ";
+            ConsultaTodosItens += "												)as tr1 ";
+            ConsultaTodosItens += "														ON tr1.ItemCode = tr2.ItemCode ";
+            ConsultaTodosItens += "														and tr1.Warehouse = tr2.Warehouse "; 
+            ConsultaTodosItens += "														and tr1.data = tr2.DocDate";
+            ConsultaTodosItens += "					) as trz on trx.f3 = trz.f3 and trx.f4 = trz.f4";
+            ConsultaTodosItens += "";
+            ConsultaTodosItens += "		) as b  on a.f3 = b.f3 and a.f4 = b.f4 ";
+            ConsultaTodosItens += "	where (a.f3 like('%SYSTEM-BIN-LOCATION%')   ";
+            ConsultaTodosItens += "		or a.f3 like('%PINHALZINHO%')   ";
+            ConsultaTodosItens += "		or a.f3 like('%UTILIZAÇÃO LIVRE%')";
+            ConsultaTodosItens += "	    or a.f3 like('%32 IGARAPAVA%')  "; 
+            ConsultaTodosItens += "		or a.f3 like('%ARMAZEM EXTERNO%'))  ";
+            ConsultaTodosItens += "		and a.f3 not like ('4003-SYSTEM-BIN-LOCATION')  ";
+            ConsultaTodosItens += "		and a.f3 not like('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM') ";
+            ConsultaTodosItens += "		and a.f3 not like('4003-ZN 27 ARMAZEM EXTRENO')   ";
+            ConsultaTodosItens += "		and a.f3 not like('4003-ZN 5 QUARENTENA')   ";
+            ConsultaTodosItens += "		and a.f3 not like('4003-ZN 7 PRODUCAO')   ";
+            ConsultaTodosItens += "		and a.f3 not like('4003-ZN6 IENS EM PROCESSO EXTERNO') ";
+            ConsultaTodosItens += "		and a.f3 not like('%4004%')   ";
+            ConsultaTodosItens += "		and a.f3 not like('%7003%')   ";
+            ConsultaTodosItens += "		and a.f3 not like('%7004%')  ";
+
+            ConsultaTodosItens += "		order by 2 ";
 
 
             //string ConsultaTodosItensTransito = "select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao like ('%TRANSITO%') or posicao like ('%TRÂNSITO%')) and posicao not like ('%4003%') and posicao not like ('%4004%') and posicao not like ('%7003%') and posicao not like ('%7004%') and data ='" + adatatodositens + "' order by 2";
@@ -1295,14 +1404,14 @@ namespace Atanor.Programas.Suplly
                                 ohtml += "<th bgcolor='#FFFFFF' height='20px'><font face='calibri' size=2 style='color:" + cor + ";font-weight: normal;'>" + variacao.ToString("n2") + "%</font></th>";
                             }
                             ohtml += "<th bgcolor='#FFFFFF' height='20px'><font face='calibri' size=2 style='color:" + cor + ";font-weight: normal;'>" + img + "</font></th>";
+                            ohtml += "<th bgcolor='#FFFFFF' height='20px'><font face='calibri' size=2 style='font-weight: normal;'>" + ponto(todos.Rows[b]["f8"] + "") + "</font></th>";
 
                         }
                         else
                         {
-                            ohtml += "<th bgcolor='#FFFFFF' height='20px'><font face='calibri' size=2;font-weight: normal;'>" + todos.Rows[b]["f7"] + "</font></th>";
+                            //ohtml += "<th bgcolor='#FFFFFF' height='20px'><font face='calibri' size=2;font-weight: normal;'>" + todos.Rows[b]["f7"] + "</font></th>";
                         }
 
-                        ohtml += "<th bgcolor='#FFFFFF' height='20px'><font face='calibri' size=2 style='font-weight: normal;'>" + ponto(todos.Rows[b]["f8"] + "") + "</font></th>";
                         ohtml += "</tr>";
                         if (lDetalhes && (todos.Rows[b]["f11"].ToString() != dia_anterior.ToString() || todos.Rows[b]["f10"].ToString() != dia_corrente.ToString()))
                         {
@@ -1364,6 +1473,8 @@ namespace Atanor.Programas.Suplly
                         // ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2 style='color:" + cor + ";font-weight: normal;'>" + custo_Antigo + "</font></th>";
                         ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2 style='color:" + cor + ";font-weight: normal;'>" + todos.Rows[0]["f9"] + "</font></th>";
                         ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2 style='color:" + cor + ";font-weight: normal;'>" + todos.Rows[0]["f7"] + "</font></th>";
+                        ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2>" + ponto(todos.Rows[0]["f8"] + "") + "</font></th>";
+
                         if (variacao == 0)
                         {
                             ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2 style='color:" + cor + ";font-weight: normal;'>0,00%</font></th>";
@@ -1378,10 +1489,9 @@ namespace Atanor.Programas.Suplly
                     }
                     else
                     {
-                        ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2;font-weight: normal;'>" + todos.Rows[0]["f7"] + "</font></th>";
+                    //    ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2;font-weight: normal;'>" + todos.Rows[0]["f7"] + "</font></th>";
                     }
 
-                    ohtml += "<th bgcolor='#99CF57' height='20px'><font face='calibri' size=2>" + ponto(todos.Rows[0]["f8"] + "") + "</font></th>";
                     
                     ohtml += "</tr>";
                     ohtml += "</tr>";
@@ -1473,7 +1583,7 @@ namespace Atanor.Programas.Suplly
                 html += "<tr>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>Resende</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + ponto(reH + "") + "</FONT></th>";
-                html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>4.800.000</FONT></th>";
+                html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>3.000.000</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + Math.Round((reH / C_Resende) * 100, 1) + "%</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + ponto(C_Resende - reH + "") + "</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + Math.Round(((100) - (Math.Round((reH / C_Resende) * 100, 1))), 1) + "%</FONT></th>";
@@ -2050,7 +2160,7 @@ namespace Atanor.Programas.Suplly
                 html += "<tr>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>Resende</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + ponto(reH + "") + "</FONT></th>";
-                html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>4.800O.000</FONT></th>";
+                html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>3.0000.000</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + Math.Round((reH / C_Resende) * 100, 1) + "%</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + ponto(C_Resende - reH + "") + "</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + ((100) - (Math.Round((reH / C_Resende) * 100, 1))) + "%</FONT></th>";

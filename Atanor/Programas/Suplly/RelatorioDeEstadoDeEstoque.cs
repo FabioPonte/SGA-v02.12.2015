@@ -55,7 +55,7 @@ namespace Atanor.Programas.Suplly
             cal_resende.Add("4002-ZN 5 QUARENTENA");
             cal_resende.Add("4001-ZN1 ENTREGA FUTURA");
             cal_resende.Add("4002-ZN1 ENTREGA FUTURA");
-            cal_resende.Add("4003-ZN 29 ARMAZEM EXTERNO");
+            //cal_resende.Add("4003-ZN 29 ARMAZEM EXTERNO");
             //cal_resende.Add("4003-SYSTEM-BIN-LOCATION");
             //cal_resende.Add("4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM");
             //cal_resende.Add("4003-ZN 5 QUARENTENA");
@@ -163,8 +163,8 @@ namespace Atanor.Programas.Suplly
         private double C_PassoFundo = 2000000;
         private double C_PatoBranco = 1000000;
         private double C_Xanxere = 150000;
-        private double C_Resende = 4800000;
-
+        // private double C_Resende = 4800000;
+        private double C_Resende = 3000000;
         private double C_IGARAPAVA7001 = (1300 * 700);
         private double C_IGARAPAVA7002 = (1300 * 700);
 
@@ -400,7 +400,7 @@ namespace Atanor.Programas.Suplly
                         {
                             ocu = ocu.Substring(0, 4);
                         }
-                        else
+                     else
                         {
                             ocu = ocu.Substring(0, 5);
                         }
@@ -569,8 +569,8 @@ namespace Atanor.Programas.Suplly
             #region Esse bloco faz a consulta no banco ,procurando todos os itens do dia selecionado
             string adatatodositens = Facilitadores.ConverterDataParaDataDoMysql.Converter(data);
             //DataTable TodosItens = Select.SelectSQL("SELECT distinct numeroitem FROM sga.condicaoestoque where posicao like ('%SYSTEM-BIN-LOCATION%') and data ='" + adatatodositens + "'");
-            //DataTable TodosItens = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao like ('%SYSTEM-BIN-LOCATION%') or posicao like ('%PINHALZINHO%') or posicao like ('%UTILIZAÇÃO LIVRE%') or posicao like ('%ARMAZEM EXTERNO%')) and posicao not like ('4003-SYSTEM-BIN-LOCATION') and posicao not like ('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM') and posicao not like ('4003-ZN 27 ARMAZEM EXTRENO') and posicao not like ('4003-ZN 5 QUARENTENA') and posicao not like ('4003-ZN 7 PRODUCAO') and posicao not like ('4003-ZN6 IENS EM PROCESSO EXTERNO')  and posicao not like ('%4004%') and posicao not like ('%7003%') and posicao not like ('%7004%') and data ='" + adatatodositens + "' order by 2");
-            DataTable TodosItens = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao posicao not like ('%TRÂNSITO%') and posicao not like ('%TRANSITO%') ) and data ='" + adatatodositens + "' order by 2");
+            DataTable TodosItens = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao like ('%SYSTEM-BIN-LOCATION%') or posicao like ('%PINHALZINHO%') or posicao like ('%UTILIZAÇÃO LIVRE%') or posicao like ('%ARMAZEM EXTERNO%')) and posicao not like ('4003-SYSTEM-BIN-LOCATION') and posicao not like ('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM') and posicao not like ('4003-ZN 27 ARMAZEM EXTRENO') and posicao not like ('4003-ZN 5 QUARENTENA') and posicao not like ('4003-ZN 7 PRODUCAO') and posicao not like ('4003-ZN6 IENS EM PROCESSO EXTERNO')  and posicao not like ('%4004%') and posicao not like ('%7003%') and posicao not like ('%7004%') and data ='" + adatatodositens + "' order by 2");
+            //DataTable TodosItens = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao posicao not like ('%TRÂNSITO%') and posicao not like ('%TRANSITO%') ) and data ='" + adatatodositens + "' order by 2");
             DataTable TodosItensTransito = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao like ('%TRANSITO%') or posicao like ('%TRÂNSITO%'))  and data ='" + adatatodositens + "' order by 2");
             //TRANSITO
             var distinct = (from r in TodosItens.AsEnumerable() select r["f4"]).Distinct().ToList();
@@ -1261,7 +1261,7 @@ namespace Atanor.Programas.Suplly
                 html += "<tr>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>Resende</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + ponto(reH + "") + "</FONT></th>";
-                html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>4.800.000</FONT></th>";
+                html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>3.000.000</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + Math.Round((reH / C_Resende) * 100, 1) + "%</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + ponto(C_Resende - reH + "") + "</FONT></th>";
                 html += "<th bgcolor='#ffffff' height='20px'><font face='calibri' size=2>" + Math.Round(((100) - (Math.Round((reH / C_Resende) * 100, 1))), 1) + "%</FONT></th>";
@@ -1335,8 +1335,9 @@ namespace Atanor.Programas.Suplly
             string adatatodositens = Facilitadores.ConverterDataParaDataDoMysql.Converter(data);
 
             //DataTable TodosItens = Select.SelectSQL("SELECT distinct numeroitem FROM sga.condicaoestoque where posicao like ('%SYSTEM-BIN-LOCATION%') and data ='" + adatatodositens + "'");
-            DataTable TodosItens = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao like ('%SYSTEM-BIN-LOCATION%') or posicao like ('%PINHALZINHO%') or posicao like ('%ARMAZEM EXTERNO%')) and posicao not like ('4003-SYSTEM-BIN-LOCATION') and posicao not like ('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM') and posicao not like ('4003-ZN 27 ARMAZEM EXTRENO') and posicao not like ('4003-ZN 5 QUARENTENA') and posicao not like ('4003-ZN 7 PRODUCAO') and posicao not like ('4003-ZN6 IENS EM PROCESSO EXTERNO')  and posicao not like ('%4004%') and data ='" + adatatodositens + "' order by 2");
-            DataTable TodosItensTransito = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where posicao like ('%TRANSITO%') and posicao not like ('%4003%') and posicao not like ('%4004%') and data ='" + adatatodositens + "' order by 2");
+            //DataTable TodosItens = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao like ('%SYSTEM-BIN-LOCATION%') or posicao like ('%PINHALZINHO%') or posicao like ('%ARMAZEM EXTERNO%')) and posicao not like ('4003-SYSTEM-BIN-LOCATION') and posicao not like ('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM') and posicao not like ('4003-ZN 27 ARMAZEM EXTRENO') and posicao not like ('4003-ZN 5 QUARENTENA') and posicao not like ('4003-ZN 7 PRODUCAO') and posicao not like ('4003-ZN6 IENS EM PROCESSO EXTERNO')  and posicao not like ('%4004%') and data ='" + adatatodositens + "' order by 2");
+            DataTable TodosItens = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where (posicao not like ('%TRANSITO%') and posicao not like ('%TRANSÍTO%')   and data ='" + adatatodositens + "' order by 2");
+            DataTable TodosItensTransito = Select.SelectSQL("select POSICAO f3,numeroitem f4, descricao f5,quantidade f6,custo f7,valor f8 from condicaoestoque where posicao like ('%TRANSITO%')  and posicao like ('%TRANSÍTO%')  and data ='" + adatatodositens + "' order by 2");
 
            
 
@@ -1836,7 +1837,7 @@ namespace Atanor.Programas.Suplly
                 html += "<tr>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>Resende</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + ponto(reH + "") + "</FONT></th>";
-                html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>4.800O.000</FONT></th>";
+                html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>3.0000.000</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + Math.Round((reH / C_Resende) * 100, 1) + "%</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + ponto(C_Resende - reH + "") + "</FONT></th>";
                 html += "<th bgcolor='silver' height='20px'><font face='calibri' size=2>" + ((100) - (Math.Round((reH / C_Resende) * 100, 1))) + "%</FONT></th>";

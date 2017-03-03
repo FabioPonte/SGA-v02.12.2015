@@ -13,6 +13,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Conector;
 using System.Data;
+using MySql.Data.MySqlClient;
+
 namespace Atanor.Programas.Suplly
 {
 
@@ -127,6 +129,74 @@ namespace Atanor.Programas.Suplly
             }
         }
 
+        private void CadastroCusto(DataTable tabela)
+        {
+
+            if (tabela.Rows.Count <= 0)
+                return;
+
+            List<string> colunas = new List<string>();
+            colunas.Add("Empresa");
+            colunas.Add("DocDate");
+            colunas.Add("ItemCode");
+            colunas.Add("Warehouse");
+            colunas.Add("CalcPrice");
+            colunas.Add("TransNum");
+
+
+            List<dynamic> valores = new List<dynamic>();
+
+            DateTime adata = DateTime.Parse("30/12/2099 00:00:00");
+
+            for (int a = 0; a < tabela.Rows.Count; a++)
+            { 
+
+                valores.Add(tabela.Rows[a]["Empresa"]);
+                string data = ((string)tabela.Rows[a]["DocDate"]);
+                //data = data.Substring(0, 10);dat
+                adata = Convert.ToDateTime(data);
+                //data = data.Replace("-", "/");
+                //  data = data + " 00:00:00"; 
+
+                valores.Add(adata);
+                valores.Add(tabela.Rows[a]["ItemCode"]);
+                valores.Add(tabela.Rows[a]["Warehouse"]);
+
+                string kj = (tabela.Rows[a]["CalcPrice"] + "").Replace(".", ",");
+                if (kj == "")
+                {
+                    kj = "0";
+                }
+
+                valores.Add(double.Parse(kj));
+                valores.Add(tabela.Rows[a]["TransNum"]);
+
+            }
+
+
+            //MySqlConnection con = Conexao.GetConnection();
+            //command = conCreateCommand();
+            /*
+            command.CommandText = string.Format("delete from custo");
+            sql = command.CommandText;
+            ini(sql, tipo);
+            retorno = command.ExecuteNonQuery();
+            */
+            ExecuteNonSql.Deletar("custo");
+            if (ExecuteNonSql.Executar("custo", TipoDeOperacao.Tipo.InsertMultiplo, colunas, valores, null) != -1)
+            {
+
+                MsgBox.Show.Info("Custo Atualizado!!!");
+
+
+            }
+            else
+            {
+                MsgBox.Show.Error("Erro ao inserir");
+            }
+
+        }
+
         private void CadastroTemporario(DataTable tabela)
         {
 
@@ -218,11 +288,18 @@ namespace Atanor.Programas.Suplly
 
         }
         Boolean temporario = false;
+        Boolean custo = false;
 
         private void NovoCadastro(DataSet tabelas)
         {
 
             DataTable tabela = tabelas.Tables[0];
+            if (custo)
+            {
+                CadastroCusto(tabela);
+                return;
+            }
+
             if (temporario)
             {
                 CadastroTemporario(tabela);
@@ -284,10 +361,31 @@ namespace Atanor.Programas.Suplly
 
         private void Cadastro()
         {
+
+            // Transporte da informação do custo.
+            // 
+            //
+            //
             temporario = false;
-            novo.Select("select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_ATANOR.DBO.OITM T1 inner join SBO_ATANOR.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_ATANOR.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_ATANOR.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_ATANOR.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0 union all select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_CONSAGRO.DBO.OITM T1 inner join SBO_CONSAGRO.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_CONSAGRO.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_CONSAGRO.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_CONSAGRO.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0");
+            custo = true;
+            // novo.Select("select 'Atanor' Empresa, DocDate ,ItemCode,Warehouse,CalcPrice,TransNum from SBO_ATANOR..OINM WHERE CalcPrice > 0  and TransNum in( select Max(TransNum) from SBO_ATANOR..OINM  WHERE CalcPrice > 0    group by Convert(varchar(8), DocDate, 112), ItemCode) union all select 'Consagro' Empresa, DocDate ,ItemCode,Warehouse,CalcPrice,TransNum from SBO_CONSAGRO..OINM WHERE CalcPrice > 0  and TransNum in( Select Max(TransNum)  from SBO_CONSAGRO..OINM  WHERE CalcPrice > 0 group by Convert(varchar(8), DocDate, 112),ItemCode ) ");
+            novo.Select("select 'Atanor' Empresa, DocDate ,ItemCode,Warehouse,CalcPrice,TransNum from SBO_ATANOR..OINM WHERE CalcPrice > 0  and TransNum in( select Max(TransNum) from SBO_ATANOR..OINM  WHERE CalcPrice > 0    group by Convert(varchar(8), DocDate, 112), ItemCode) ");
+
+
+
+            //temporario = false;
+            //novo.Select("select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_ATANOR.DBO.OITM T1 inner join SBO_ATANOR.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_ATANOR.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_ATANOR.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_ATANOR.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0 union all select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_CONSAGRO.DBO.OITM T1 inner join SBO_CONSAGRO.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_CONSAGRO.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_CONSAGRO.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_CONSAGRO.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0");
+
+
             MsgBox.Show.EspereAbrir();
-            
+
+            temporario = false;
+            custo = false;
+            //novo.Select("select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_ATANOR.DBO.OITM T1 inner join SBO_ATANOR.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_ATANOR.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_ATANOR.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_ATANOR.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0 union all select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_CONSAGRO.DBO.OITM T1 inner join SBO_CONSAGRO.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_CONSAGRO.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_CONSAGRO.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_CONSAGRO.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0");
+            novo.Select(" select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_ATANOR.DBO.OITM T1 inner join SBO_ATANOR.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_ATANOR.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode            inner join SBO_ATANOR.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs            inner join SBO_ATANOR.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty > 0 WHERE T1.MatType in(0,4) ");
+
+            MsgBox.Show.EspereAbrir();
+
         }
         private void Editar()
         {
@@ -490,7 +588,8 @@ namespace Atanor.Programas.Suplly
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             temporario = true;
-            novo.Select("select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_ATANOR.DBO.OITM T1 inner join SBO_ATANOR.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_ATANOR.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_ATANOR.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_ATANOR.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0 union all select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_CONSAGRO.DBO.OITM T1 inner join SBO_CONSAGRO.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_CONSAGRO.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_CONSAGRO.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_CONSAGRO.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0");
+            // novo.Select("select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_ATANOR.DBO.OITM T1 inner join SBO_ATANOR.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_ATANOR.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_ATANOR.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_ATANOR.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0 union all select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_CONSAGRO.DBO.OITM T1 inner join SBO_CONSAGRO.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_CONSAGRO.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode			 inner join SBO_CONSAGRO.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs			 inner join SBO_CONSAGRO.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty>0");
+            novo.Select(" select 'N° do Item' = T1.ItemCode,'Descrição do item' = T1.ItemName,'NCM' = T2.NcmCode,'Depósito' = T3.WhsCode,'Alocação' = T4.BinCode,'Quantidade' = T3.OnHandQty,'Custo' = T5.AvgPrice from SBO_ATANOR.DBO.OITM T1 inner join SBO_ATANOR.DBO.ONCM T2 on T2.AbsEntry = T1.NCMCode             inner join SBO_ATANOR.DBO.OIBQ T3 on T3.ItemCode = T1.ItemCode            inner join SBO_ATANOR.DBO.OBIN T4 on T4.AbsEntry = T3.BinAbs            inner join SBO_ATANOR.DBO.OITW T5 on T5.ItemCode = T1.ItemCode  and T5.WhsCode = T3.WhsCode and T3.OnHandQty > 0 WHERE T1.MatType = 0 ");
             MsgBox.Show.EspereAbrir();
         }
 
