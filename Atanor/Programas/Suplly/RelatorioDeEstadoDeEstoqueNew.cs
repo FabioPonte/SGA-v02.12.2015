@@ -44,6 +44,8 @@ namespace Atanor.Programas.Suplly
             //Fabio Ponte 30/11/16
             cal_pato_branco.Add("2002-ZN 26 AVARIAS");
             cal_pato_branco.Add("2002-ZN 28 BLOQUEADO");
+            //Fabio Ponte 02/03/17
+            cal_pato_branco.Add("2002-ZN 41 CAMBE");
 
 
             //cal_pato_branco.Add("2002-ZN 8 SEGREGADO PARA AVALIACAO");
@@ -80,7 +82,8 @@ namespace Atanor.Programas.Suplly
             cal_resende.Add("4001-ZN 7 PRODUCAO");
             cal_resende.Add("4002-ZN 26 AVARIAS");
             cal_resende.Add("4002-ZN 28 BLOQUEADO");
-     
+            //Fabio Ponte 02/03/17
+            cal_resende.Add("4002-ZN 40-EBAMAG");
 
 
 
@@ -737,7 +740,9 @@ namespace Atanor.Programas.Suplly
             ConsultaTodosItens += "	where (a.f3 like('%SYSTEM-BIN-LOCATION%')   ";
             ConsultaTodosItens += "		or a.f3 like('%PINHALZINHO%')   ";
             ConsultaTodosItens += "		or a.f3 like('%UTILIZAÇÃO LIVRE%')";
-            ConsultaTodosItens += "	    or a.f3 like('%32 IGARAPAVA%')  "; 
+            ConsultaTodosItens += "	    or a.f3 like('%32 IGARAPAVA%')  ";
+            ConsultaTodosItens += "	    or a.f3 like('%2002-ZN 41 CAMBE%') ";
+            ConsultaTodosItens += "	    or a.f3 like('%4002-ZN 40-EBAMAG%') ";
             ConsultaTodosItens += "		or a.f3 like('%ARMAZEM EXTERNO%'))  ";
             ConsultaTodosItens += "		and a.f3 not like ('4003-SYSTEM-BIN-LOCATION')  ";
             ConsultaTodosItens += "		and a.f3 not like('4003-ZN 1 ESTOQUE EM TRANSITO EADI X ARMAZÉM') ";
